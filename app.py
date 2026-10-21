@@ -1,0 +1,302 @@
+"""RouteWise BLR — Urban Logistics Decision Support System.
+
+A decision-support app (not a traffic dashboard): it ranks Bengaluru
+routes by reliability and recommends a dispatch window against a
+user-set journey-time target.
+
+Data: Traffic Monitor Lizard (https://github.com/thecont1/traffic-monitor-lizard),
+dataset licensed CC BY 4.0. Frozen snapshot 2026-10-21; see data/raw/SNAPSHOT.md.
+All app code written from scratch for this project.
+"""
+import json
+import sys
+from pathlib import Path
+
+import numpy as np
+import pandas as pd
+import streamlit as st
+
+sys.path.insert(0, str(Path(__file__).parent / "src"))
+from anytrip import build_model, fetch_route, geocode_place, on_time_prob, predict  # noqa: E402
+from common import OUTPUTS, load_cleaned, load_routes  # noqa: E402
+from planner import hourly_stats, recommend  # noqa: E402
+
+try:
+    import plotly.express as px
+    HAS_PLOTLY = True
+except ImportError:
+    HAS_PLOTLY = False
+
+st.set_page_config(page_title="RouteWise BLR", layout="wide")
+
+
+@st.cache_data
+def get_data():
+    return load_cleaned()
+
+
+@st.cache_data
+def get_routes():
+    return load_routes()
+
+
+df = get_data()
+routes = get_routes()
+label_to_code = dict(zip(routes["label_full"], routes["route_code"]))
+
+st.title("RouteWise BLR — Urban Logistics Decision Support System")
+st.caption(
+    "For a logistics/dispatch planner: which departure window is most reliable "
+    "for each Bengaluru route? Data: Traffic Monitor Lizard dataset (CC BY 4.0), "
+    "frozen snapshot 2026-10-21 (2025-09-25 to 2026-10-21). "
+    "Journey-time targets in this app are planning assumptions set by you — "
+    "they are not observed business requirements."
+)
+
+view = st.sidebar.radio(
+    "View",
+    ["Plan Any Trip", "Reliability Ranking", "Route Explorer", "Dispatch Planner", "Weather Impact"],
+)
+
+
+@st.cache_resource
+def get_model():
+    return build_model(load_cleaned())
+
+
+@st.cache_data(show_spinner=False)
+def cached_geocode(query: str):
+    return geocode_place(query)
+
+
+@st.cache_data(show_spinner=False)
+def cached_route(origin: dict, destination: dict):
+    return fetch_route(origin, destination)
+
+
+def _validated_error_pct() -> str:
+    try:
+        facts = json.loads((OUTPUTS / "anytrip_facts.json").read_text())
+        return f"{facts['overall_mape_pct']:.1f}"
+    except Exception:
+        return "see outputs/anytrip_validation.md"
+
+
+# ---------------------------------------------------------------- any trip (MODELLED)
+if view == "Plan Any Trip":
+    st.header("Plan any trip — modelled estimate for routes we did not measure")
+    st.warning(
+        "**MODELLED estimate** — predicted from Bengaluru-wide patterns learned from "
+        "13 measured corridors. Not measured on this exact route. "
+        f"Validated average error: **{_validated_error_pct()}%** (leave-one-route-out). "
+        "The other four views in this app are MEASURED — every number there comes from "
+        "actual readings on that route. This view trades that certainty for coverage: "
+        "it can say something about any trip, with the error stated up front."
+    )
+    st.write(
+        "How it works: the model learned, from the 12 core measured routes, how many "
+        "minutes one kilometre of Bengaluru road typically costs at each hour "
+        "(median and P90, weekday/weekend), plus one global rain multiplier. "
+        "Your trip's road distance comes from OpenStreetMap routing (OSRM); place "
+        "names are resolved by Nominatim. Details: outputs/anytrip_model.md; "
+        "accuracy audit: outputs/anytrip_validation.md."
+    )
+    with st.form("anytrip_form"):
+        c1, c2 = st.columns(2)
+        origin_text = c1.text_input("Start (origin)", value="Benniganahalli Metro Station")
+        dest_text = c2.text_input("Destination", value="Embassy TechVillage")
+        c3, c4 = st.columns(2)
+        day_type = c3.radio("Day type", ["weekday", "weekend"], horizontal=True)
+        scenario_label = c4.radio("Weather scenario", ["No rain", "Rain"], horizontal=True)
+        target = st.number_input("Target travel time (minutes) — planning assumption",
+                                 min_value=5, max_value=300, value=40)
+        c5, c6 = st.columns(2)
+        start_hour = c5.slider("Search from (hour)", 0, 23, 6)
+        end_hour = c6.slider("Search until (hour, exclusive)", 1, 24, 22)
+        submitted = st.form_submit_button("Plan this trip")
+
+    if submitted:
+        if end_hour <= start_hour:
+            st.error("End hour must be after start hour.")
+        else:
+            origin = cached_geocode(origin_text)
+            dest = cached_geocode(dest_text)
+            if not origin.get("ok"):
+                st.error(f"Start place problem — {origin.get('error', 'lookup failed.')}")
+            elif not dest.get("ok"):
+                st.error(f"Destination problem — {dest.get('error', 'lookup failed.')}")
+            else:
+                route = cached_route(origin, dest)
+                if not route.get("ok"):
+                    st.error(route.get("error", "Routing failed. Please try again."))
+                else:
+                    st.session_state["anytrip_result"] = {
+                        "origin": origin, "dest": dest, "route": route,
+                        "day_type": day_type,
+                        "scenario": "rain" if scenario_label == "Rain" else "no_rain",
+                        "target": float(target),
+                        "start_hour": int(start_hour), "end_hour": int(end_hour),
+                    }
+
+    result = st.session_state.get("anytrip_result")
+    if result:
+        model = get_model()
+        pred = predict(model, result["route"]["distance_km"],
+                       result["day_type"], result["scenario"])
+        window = pred[(pred["hour"] >= result["start_hour"])
+                      & (pred["hour"] < result["end_hour"])].copy()
+        window["on_time_prob"] = [on_time_prob(model, m, result["target"])
+                                  for m in window["median_min"]]
+        ranked = window.sort_values(["on_time_prob", "p90_min", "hour"],
+                                    ascending=[False, True, True])
+        best = ranked.iloc[0]
+        st.success(
+            f"Recommended departure: **{int(best['hour']):02d}:00–{int(best['hour']):02d}:59** — "
+            f"modelled on-time probability {best['on_time_prob']*100:.0f}% "
+            f"(predicted median {best['median_min']:.0f} min, P90 {best['p90_min']:.0f} min) "
+            f"against your {result['target']:.0f}-minute planning target."
+        )
+        st.write(
+            f"Route found: **{result['route']['distance_km']:.1f} km** by road "
+            f"(OSRM free-flow reference {result['route']['freeflow_min']:.0f} min with no "
+            "traffic — shown for reference only; the prediction below is RouteWise's, "
+            "from the historical pattern). "
+            f"Day type: {result['day_type']}; scenario: "
+            f"{'rain (global multiplier applied)' if result['scenario'] == 'rain' else 'no rain'}."
+        )
+        show = window.sort_values("hour").copy()
+        show["on_time_prob"] = (show["on_time_prob"] * 100).round(0)
+        show = show.rename(columns={
+            "hour": "Departure hour", "median_min": "Predicted median (min)",
+            "p90_min": "Predicted P90 (min)", "on_time_prob": "Modelled on-time %"})
+        st.dataframe(show, width="stretch")
+        if HAS_PLOTLY:
+            fig = px.line(pred.sort_values("hour"), x="hour",
+                          y=["median_min", "p90_min"], markers=True,
+                          labels={"value": "Predicted minutes", "hour": "Departure hour",
+                                  "variable": ""})
+            fig.add_hline(y=result["target"], line_dash="dash",
+                          annotation_text="Your target (planning assumption)")
+            st.plotly_chart(fig, width="stretch")
+        st.caption("Modelled estimates — not measurements. Place lookup: OpenStreetMap "
+                   "Nominatim; routing: OSRM (free public servers, demo-grade). "
+                   "Traffic pattern: Traffic Monitor Lizard dataset (CC BY 4.0).")
+
+# ---------------------------------------------------------------- ranking
+elif view == "Reliability Ranking":
+    st.header("Route reliability ranking — core 12 routes (~10 km)")
+    st.write(
+        "Ranked by **buffer index** = (P90 − median) / median: how much extra time you "
+        "must budget over the typical trip for a 9-in-10 on-time plan. Rank 1 = most "
+        "reliable. The Airport route (~34 km) is excluded — it is not comparable."
+    )
+    rel = pd.read_csv(OUTPUTS / "reliability_ranking.csv")
+    show = rel[["reliability_rank", "label_short", "n", "median", "p90",
+                "buffer_minutes", "buffer_index"]].rename(columns={
+        "reliability_rank": "Rank", "label_short": "Route", "n": "Readings (hourly obs.)",
+        "median": "Median (min)", "p90": "P90 (min)",
+        "buffer_minutes": "Buffer (min)", "buffer_index": "Buffer index"})
+    st.dataframe(show, width="stretch")
+    if HAS_PLOTLY:
+        fig = px.bar(rel.sort_values("buffer_index"), x="buffer_index", y="label_short",
+                     orientation="h", labels={"buffer_index": "Buffer index", "label_short": "Route"})
+        st.plotly_chart(fig, width="stretch")
+    st.info("Headline: the fastest route by median is not the most reliable — "
+            "see outputs/findings.md for the concrete route example.")
+
+# ---------------------------------------------------------------- explorer
+elif view == "Route Explorer":
+    st.header("Route explorer — travel time by departure hour")
+    full_label = st.selectbox("Route", list(label_to_code.keys()))
+    day_type = st.radio("Day type", ["weekday", "weekend"], horizontal=True)
+    code = label_to_code[full_label]
+    sub = df[(df["route_code"] == code) & (df["day_type"] == day_type)]
+    by_hour = sub.groupby("hour")["duration"].agg(
+        n="size", median="median", p90=lambda s: s.quantile(0.90)).reset_index()
+    if HAS_PLOTLY:
+        fig = px.line(by_hour, x="hour", y=["median", "p90"], markers=True,
+                      labels={"value": "Minutes", "hour": "Departure hour", "variable": ""})
+        st.plotly_chart(fig, width="stretch")
+    else:
+        st.line_chart(by_hour.set_index("hour")[["median", "p90"]])
+    st.dataframe(by_hour, width="stretch")
+    wk = df[(df["route_code"] == code)].groupby(["day_type", "time_bucket"])["duration"].median().unstack()
+    st.subheader("Median duration by time bucket (minutes)")
+    st.dataframe(wk.round(1), width="stretch")
+
+# ---------------------------------------------------------------- planner
+elif view == "Dispatch Planner":
+    st.header("Dispatch-window planner")
+    st.write(
+        "Pick a route, a day type and a journey-time target (**planning assumption**). "
+        "The planner scores every departure hour in your search range on past trips: "
+        "on-time probability = share of trips that finished within the target. "
+        "Hours with fewer than 30 readings are flagged low-confidence and excluded "
+        "from the recommendation. Recommendation = highest on-time probability, "
+        "tie-break lowest P90."
+    )
+    full_label = st.selectbox("Route", list(label_to_code.keys()))
+    code = label_to_code[full_label]
+    day_type = st.radio("Day type", ["weekday", "weekend"], horizontal=True)
+    route_median = float(df[(df["route_code"] == code) & (df["day_type"] == day_type)]["duration"].median())
+    target = st.number_input("Target travel time (minutes) — planning assumption",
+                             min_value=10, max_value=180, value=int(np.ceil(route_median)))
+    c1, c2 = st.columns(2)
+    start_hour = c1.slider("Search from (hour)", 0, 23, 6)
+    end_hour = c2.slider("Search until (hour, exclusive)", 1, 24, 22)
+    if end_hour <= start_hour:
+        st.error("End hour must be after start hour.")
+    else:
+        stats = hourly_stats(df, code, day_type, float(target), start_hour, end_hour)
+        rec = recommend(stats)
+        if rec["recommended_hour"] is None:
+            st.warning(rec["reason"])
+        else:
+            st.success(
+                f"Recommended departure: **{rec['recommended_hour']:02d}:00–{rec['recommended_hour']:02d}:59** "
+                f"— on-time probability {rec['on_time_prob']*100:.0f}% "
+                f"(median {rec['median_min']:.0f} min, P90 {rec['p90_min']:.0f} min, n={rec['n']})."
+            )
+        show = stats.copy()
+        show["on_time_prob"] = (show["on_time_prob"] * 100).round(1)
+        show = show.rename(columns={
+            "departure_hour": "Hour", "n": "Readings", "median_min": "Median (min)",
+            "p90_min": "P90 (min)", "on_time_prob": "On-time %", "low_confidence": "Low confidence"})
+        st.dataframe(show, width="stretch")
+        if HAS_PLOTLY:
+            fig = px.bar(stats, x="departure_hour", y="on_time_prob",
+                         labels={"departure_hour": "Departure hour", "on_time_prob": "On-time probability"})
+            st.plotly_chart(fig, width="stretch")
+
+# ---------------------------------------------------------------- weather
+elif view == "Weather Impact":
+    st.header("Weather impact — scoped analysis")
+    st.warning(
+        "Weather was recorded only from 2026-05-24 onward and only on a subset of days "
+        "(see outputs/data_audit.md). This view uses ONLY rows with a weather snapshot; "
+        "core 12 routes. Rain = rsi_flag of Rain / Light Rain. Association, not causation."
+    )
+    overall = pd.read_csv(OUTPUTS / "weather_overall.csv")
+    overall["condition"] = np.where(overall["is_rain"], "Rain", "No rain")
+    st.subheader("Duration by rain condition (core 12 routes, weather-covered rows)")
+    st.dataframe(overall[["condition", "n", "median", "p90", "iqr"]].rename(columns={
+        "n": "Hourly obs.", "median": "Median (min)", "p90": "P90 (min)", "iqr": "IQR (min)"}),
+        width="stretch")
+    if HAS_PLOTLY:
+        fig = px.bar(overall, x="condition", y=["median", "p90"], barmode="group",
+                     labels={"value": "Minutes", "condition": "", "variable": ""})
+        st.plotly_chart(fig, width="stretch")
+    summ = pd.read_csv(OUTPUTS / "weather_summary.csv")
+    summ["condition"] = np.where(summ["is_rain"], "Rain", "No rain")
+    st.subheader("Peak vs off-peak")
+    st.dataframe(summ[["period", "condition", "n", "median", "p90", "iqr"]],
+                 width="stretch")
+    st.write("Full write-up: outputs/weather_analysis.md")
+
+st.divider()
+st.caption(
+    "RouteWise BLR · Data: Traffic Monitor Lizard "
+    "(https://github.com/thecont1/traffic-monitor-lizard), CC BY 4.0 · "
+    "Analysis and app code written from scratch for this project · "
+    "Google Maps travel-time estimates, not observed vehicle trips."
+)

@@ -1,0 +1,105 @@
+route_code,label_short,is_airport,day_type,time_bucket,n,median,p90
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekday,evening_peak,1304,36.0,43.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekday,midday,1301,33.0,37.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekday,morning_peak,906,34.0,39.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekday,night,2557,20.0,27.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekend,evening_peak,544,35.0,42.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekend,midday,538,34.0,40.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekend,morning_peak,364,27.0,31.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekend,night,1045,20.0,29.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekday,evening_peak,1304,37.0,45.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekday,midday,1301,33.0,40.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekday,morning_peak,906,36.0,43.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekday,night,2557,19.0,25.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekend,evening_peak,544,32.0,40.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekend,midday,538,33.0,39.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekend,morning_peak,364,23.0,28.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekend,night,1045,20.0,26.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekday,evening_peak,1304,26.0,31.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekday,midday,1301,24.0,27.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekday,morning_peak,906,24.0,28.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekday,night,2557,16.0,21.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekend,evening_peak,544,23.5,29.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekend,midday,538,24.0,29.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekend,morning_peak,364,20.0,23.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekend,night,1045,16.0,20.0
+WGG8+G5|XH7P+G6,Mysore Road,False,weekday,evening_peak,1284,32.0,38.0
+WGG8+G5|XH7P+G6,Mysore Road,False,weekday,midday,1284,31.0,37.0
+WGG8+G5|XH7P+G6,Mysore Road,False,weekday,morning_peak,894,33.0,43.0
+WGG8+G5|XH7P+G6,Mysore Road,False,weekday,night,2526,18.0,25.0
+WGG8+G5|XH7P+G6,Mysore Road,False,weekend,evening_peak,534,31.5,41.0
+WGG8+G5|XH7P+G6,Mysore Road,False,weekend,midday,528,31.0,40.0
+WGG8+G5|XH7P+G6,Mysore Road,False,weekend,morning_peak,356,22.0,30.0
+WGG8+G5|XH7P+G6,Mysore Road,False,weekend,night,1027,19.0,27.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekday,evening_peak,1304,28.0,32.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekday,midday,1301,26.0,31.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekday,morning_peak,906,28.0,34.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekday,night,2557,16.0,22.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekend,evening_peak,544,27.0,31.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekend,midday,538,25.0,30.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekend,morning_peak,364,21.0,25.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekend,night,1045,16.0,23.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekday,evening_peak,1304,42.0,47.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekday,midday,1301,41.0,45.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekday,morning_peak,906,40.0,46.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekday,night,2557,22.0,31.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekend,evening_peak,544,40.0,47.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekend,midday,538,38.0,45.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekend,morning_peak,364,30.0,35.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekend,night,1045,23.0,34.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekday,evening_peak,1268,40.0,48.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekday,midday,1264,33.0,42.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekday,morning_peak,878,36.0,51.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekday,night,2494,20.0,28.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekend,evening_peak,524,33.0,40.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekend,midday,518,31.0,39.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekend,morning_peak,348,22.0,26.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekend,night,1009,22.0,28.0
+XG48+2W|VHWC+C3,South Outer Ring,False,weekday,evening_peak,1240,39.0,44.0
+XG48+2W|VHWC+C3,South Outer Ring,False,weekday,midday,1236,36.0,39.0
+XG48+2W|VHWC+C3,South Outer Ring,False,weekday,morning_peak,854,34.0,37.0
+XG48+2W|VHWC+C3,South Outer Ring,False,weekday,night,2423,21.0,30.0
+XG48+2W|VHWC+C3,South Outer Ring,False,weekend,evening_peak,519,38.0,45.0
+XG48+2W|VHWC+C3,South Outer Ring,False,weekend,midday,513,37.0,42.0
+XG48+2W|VHWC+C3,South Outer Ring,False,weekend,morning_peak,344,30.0,35.0
+XG48+2W|VHWC+C3,South Outer Ring,False,weekend,night,995,21.0,31.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekday,evening_peak,1304,39.0,44.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekday,midday,1301,36.0,41.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekday,morning_peak,906,33.0,43.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekday,night,2557,19.0,28.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekend,evening_peak,544,36.0,43.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekend,midday,538,33.0,39.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekend,morning_peak,364,26.0,33.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekend,night,1045,20.0,30.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekday,evening_peak,1300,67.0,76.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekday,midday,1300,58.0,62.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekday,morning_peak,905,51.0,57.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekday,night,2553,39.0,51.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekend,evening_peak,544,60.0,73.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekend,midday,538,57.0,67.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekend,morning_peak,364,46.0,52.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekend,night,1045,40.0,52.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekday,evening_peak,1304,42.0,49.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekday,midday,1301,37.0,42.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekday,morning_peak,906,36.0,43.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekday,night,2557,19.0,31.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekend,evening_peak,544,36.0,42.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekend,midday,538,34.0,38.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekend,morning_peak,364,27.0,29.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekend,night,1045,21.0,33.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekday,evening_peak,1304,29.0,48.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekday,midday,1301,29.0,41.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekday,morning_peak,906,39.0,55.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekday,night,2557,17.0,24.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekend,evening_peak,544,21.0,25.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekend,midday,538,19.0,23.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekend,morning_peak,364,16.0,18.69999999999999
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekend,night,1045,17.0,23.0
+XPC7+72|XM33+J3,Old Airport Road,False,weekday,evening_peak,1304,39.0,49.0
+XPC7+72|XM33+J3,Old Airport Road,False,weekday,midday,1301,30.0,37.0
+XPC7+72|XM33+J3,Old Airport Road,False,weekday,morning_peak,906,36.0,47.0
+XPC7+72|XM33+J3,Old Airport Road,False,weekday,night,2557,16.0,27.0
+XPC7+72|XM33+J3,Old Airport Road,False,weekend,evening_peak,544,30.0,37.0
+XPC7+72|XM33+J3,Old Airport Road,False,weekend,midday,538,27.0,33.0
+XPC7+72|XM33+J3,Old Airport Road,False,weekend,morning_peak,364,20.0,24.0
+XPC7+72|XM33+J3,Old Airport Road,False,weekend,night,1045,17.0,24.0

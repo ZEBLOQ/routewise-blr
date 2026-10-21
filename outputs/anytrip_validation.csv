@@ -1,0 +1,14 @@
+route_code,label_short,group,median_distance_km,n_cells,mape_pct,mae_min
+XJG4+7J|5PX4+HQ,Airport Expy,airport_separate,34.3,48,76.8,39.72
+VJRQ+2M|RMJJ+F4,Hosur Road,core12,10.4,48,31.97,7.03
+XMW9+G8|WMJR+V4,East Outer Ring,core12,10.0,48,26.33,5.64
+WH5F+26|WJ8X+F5W,Double Decker Flyover,core12,10.1,48,19.62,4.57
+WHR9+R6|XJGF+6J,Central Diagonal 2,core12,10.2,48,18.83,6.24
+XG48+2W|VHWC+C3,South Outer Ring,core12,10.6,48,9.8,3.1
+XJPW+92|WJP4+FF,East Inner Ring,core12,10.5,48,8.94,2.9
+XPC7+72|XM33+J3,Old Airport Road,core12,9.4,48,7.49,2.0
+WP44+W8|WJFH+XQ,Sarjapur Road,core12,10.1,48,7.29,2.09
+2HVW+G8|XJXR+WG,North Outer Ring,core12,9.7,48,6.91,2.01
+XHJ7+MG|WJM6+VC,Central Diagonal 1,core12,10.5,48,6.61,1.96
+WGG8+G5|XH7P+G6,Mysore Road,core12,9.9,48,4.98,1.39
+2HM2+P8|XJV5+RG,North Inner Ring,core12,10.6,48,3.93,1.19

@@ -1,0 +1,12 @@
+{
+  "overall_mape_pct": 17.7,
+  "overall_mae_min": 6.1,
+  "core12_mape_pct": 12.7,
+  "airport_mape_pct": 76.8,
+  "worst_route": "Airport Expy",
+  "worst_route_mape_pct": 76.8,
+  "best_route": "North Inner Ring",
+  "best_route_mape_pct": 3.93,
+  "n_routes_validated": 13,
+  "n_cells_total": 624
+}

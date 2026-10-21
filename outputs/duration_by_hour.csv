@@ -1,0 +1,313 @@
+route_code,label_short,is_airport,hour,n,median,p90
+2HM2+P8|XJV5+RG,North Inner Ring,False,0,376,21.0,22.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,1,380,20.0,20.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,2,381,19.0,20.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,3,387,18.0,19.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,4,385,18.0,19.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,5,385,19.0,20.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,6,184,20.0,21.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,7,252,24.0,27.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,8,318,29.0,34.30000000000001
+2HM2+P8|XJV5+RG,North Inner Ring,False,9,340,34.5,39.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,10,360,36.0,40.10000000000002
+2HM2+P8|XJV5+RG,North Inner Ring,False,11,353,34.0,38.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,12,358,34.0,38.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,13,379,34.0,39.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,14,371,32.0,36.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,15,378,33.0,37.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,16,381,34.0,38.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,17,374,37.0,40.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,18,340,40.0,45.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,19,382,39.0,45.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,20,371,33.0,38.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,21,376,29.0,32.5
+2HM2+P8|XJV5+RG,North Inner Ring,False,22,380,26.0,28.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,23,368,22.0,24.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,0,376,21.0,26.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,1,380,19.0,22.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,2,381,18.0,20.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,3,387,17.0,19.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,4,385,18.0,20.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,5,385,18.0,20.600000000000023
+2HVW+G8|XJXR+WG,North Outer Ring,False,6,184,18.0,21.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,7,252,26.0,35.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,8,318,32.0,40.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,9,340,37.0,43.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,10,360,35.0,43.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,11,353,35.0,42.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,12,358,35.0,41.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,13,379,33.0,39.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,14,371,30.0,36.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,15,378,31.0,37.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,16,381,36.0,44.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,17,374,37.0,45.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,18,340,39.0,47.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,19,382,37.0,43.900000000000034
+2HVW+G8|XJXR+WG,North Outer Ring,False,20,371,32.0,38.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,21,376,27.0,32.5
+2HVW+G8|XJXR+WG,North Outer Ring,False,22,380,23.0,27.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,23,368,21.0,24.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,0,376,16.0,19.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,1,380,15.0,17.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,2,381,15.0,17.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,3,387,15.0,17.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,4,385,15.0,17.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,5,385,16.0,17.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,6,184,18.0,19.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,7,252,21.0,23.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,8,318,23.0,27.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,9,340,24.0,29.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,10,360,24.0,29.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,11,353,24.0,28.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,12,358,24.0,28.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,13,379,24.0,28.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,14,371,22.0,27.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,15,378,23.0,27.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,16,381,25.0,29.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,17,374,26.0,30.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,18,340,28.0,33.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,19,382,27.0,32.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,20,371,23.0,28.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,21,376,21.0,24.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,22,380,20.0,23.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,23,368,18.0,21.0
+WGG8+G5|XH7P+G6,Mysore Road,False,0,370,18.0,20.0
+WGG8+G5|XH7P+G6,Mysore Road,False,1,375,18.0,19.0
+WGG8+G5|XH7P+G6,Mysore Road,False,2,376,17.0,18.0
+WGG8+G5|XH7P+G6,Mysore Road,False,3,382,17.0,18.0
+WGG8+G5|XH7P+G6,Mysore Road,False,4,380,17.0,18.0
+WGG8+G5|XH7P+G6,Mysore Road,False,5,380,18.0,19.0
+WGG8+G5|XH7P+G6,Mysore Road,False,6,184,19.0,20.0
+WGG8+G5|XH7P+G6,Mysore Road,False,7,247,22.0,25.0
+WGG8+G5|XH7P+G6,Mysore Road,False,8,313,24.0,35.0
+WGG8+G5|XH7P+G6,Mysore Road,False,9,335,35.0,43.0
+WGG8+G5|XH7P+G6,Mysore Road,False,10,355,36.0,45.0
+WGG8+G5|XH7P+G6,Mysore Road,False,11,348,33.0,40.0
+WGG8+G5|XH7P+G6,Mysore Road,False,12,353,33.0,39.0
+WGG8+G5|XH7P+G6,Mysore Road,False,13,374,31.0,37.0
+WGG8+G5|XH7P+G6,Mysore Road,False,14,365,29.0,35.0
+WGG8+G5|XH7P+G6,Mysore Road,False,15,372,29.0,34.900000000000034
+WGG8+G5|XH7P+G6,Mysore Road,False,16,375,30.0,35.60000000000002
+WGG8+G5|XH7P+G6,Mysore Road,False,17,368,31.0,37.0
+WGG8+G5|XH7P+G6,Mysore Road,False,18,334,34.0,42.69999999999999
+WGG8+G5|XH7P+G6,Mysore Road,False,19,376,34.0,42.5
+WGG8+G5|XH7P+G6,Mysore Road,False,20,365,30.0,38.0
+WGG8+G5|XH7P+G6,Mysore Road,False,21,370,26.0,31.0
+WGG8+G5|XH7P+G6,Mysore Road,False,22,374,24.0,29.0
+WGG8+G5|XH7P+G6,Mysore Road,False,23,362,20.0,23.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,0,376,16.0,17.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,1,380,15.0,17.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,2,381,15.0,16.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,3,387,15.0,16.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,4,385,15.0,16.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,5,385,16.0,17.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,6,184,18.0,19.700000000000017
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,7,252,23.0,28.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,8,318,25.0,30.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,9,340,28.0,33.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,10,360,30.0,35.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,11,353,28.0,32.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,12,358,27.5,31.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,13,379,26.0,30.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,14,371,25.0,28.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,15,378,25.0,27.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,16,381,26.0,29.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,17,374,27.0,30.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,18,340,29.0,33.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,19,382,29.0,33.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,20,371,26.0,30.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,21,376,23.0,26.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,22,380,20.0,23.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,23,368,18.0,20.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,0,376,23.0,26.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,1,380,22.0,24.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,2,381,21.0,22.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,3,387,20.0,21.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,4,385,20.0,20.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,5,385,21.0,22.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,6,184,24.0,25.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,7,252,28.0,35.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,8,318,34.0,40.30000000000001
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,9,340,41.0,46.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,10,360,43.0,48.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,11,353,40.0,46.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,12,358,41.0,45.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,13,379,41.0,45.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,14,371,40.0,44.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,15,378,41.0,46.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,16,381,41.0,45.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,17,374,42.0,46.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,18,340,44.0,48.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,19,382,42.0,47.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,20,371,36.0,43.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,21,376,33.0,39.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,22,380,29.0,34.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,23,368,26.0,29.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,0,365,21.0,25.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,1,369,20.0,23.19999999999999
+WP44+W8|WJFH+XQ,Sarjapur Road,False,2,370,19.0,21.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,3,376,18.0,20.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,4,374,18.0,20.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,5,374,19.0,21.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,6,184,19.0,20.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,7,241,22.0,33.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,8,307,31.0,44.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,9,329,35.0,52.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,10,349,35.0,53.19999999999999
+WP44+W8|WJFH+XQ,Sarjapur Road,False,11,342,35.0,46.900000000000034
+WP44+W8|WJFH+XQ,Sarjapur Road,False,12,347,33.0,41.400000000000034
+WP44+W8|WJFH+XQ,Sarjapur Road,False,13,368,31.0,38.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,14,359,29.0,36.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,15,366,35.0,42.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,16,369,35.0,43.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,17,363,37.0,45.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,18,329,41.0,49.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,19,371,41.0,49.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,20,360,36.0,43.10000000000002
+WP44+W8|WJFH+XQ,Sarjapur Road,False,21,365,31.0,38.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,22,369,25.0,29.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,23,357,22.0,25.0
+XG48+2W|VHWC+C3,South Outer Ring,False,0,357,21.0,22.0
+XG48+2W|VHWC+C3,South Outer Ring,False,1,361,20.0,21.0
+XG48+2W|VHWC+C3,South Outer Ring,False,2,362,19.0,20.0
+XG48+2W|VHWC+C3,South Outer Ring,False,3,368,19.0,20.0
+XG48+2W|VHWC+C3,South Outer Ring,False,4,367,20.0,21.0
+XG48+2W|VHWC+C3,South Outer Ring,False,5,367,21.0,22.0
+XG48+2W|VHWC+C3,South Outer Ring,False,6,166,21.0,24.0
+XG48+2W|VHWC+C3,South Outer Ring,False,7,234,28.0,31.0
+XG48+2W|VHWC+C3,South Outer Ring,False,8,300,31.0,35.0
+XG48+2W|VHWC+C3,South Outer Ring,False,9,322,34.0,38.0
+XG48+2W|VHWC+C3,South Outer Ring,False,10,342,36.0,38.0
+XG48+2W|VHWC+C3,South Outer Ring,False,11,335,36.0,40.0
+XG48+2W|VHWC+C3,South Outer Ring,False,12,340,37.0,41.0
+XG48+2W|VHWC+C3,South Outer Ring,False,13,361,36.0,40.0
+XG48+2W|VHWC+C3,South Outer Ring,False,14,353,35.0,39.0
+XG48+2W|VHWC+C3,South Outer Ring,False,15,360,36.0,39.0
+XG48+2W|VHWC+C3,South Outer Ring,False,16,363,38.0,41.0
+XG48+2W|VHWC+C3,South Outer Ring,False,17,357,39.0,42.0
+XG48+2W|VHWC+C3,South Outer Ring,False,18,322,42.0,46.0
+XG48+2W|VHWC+C3,South Outer Ring,False,19,364,42.0,46.69999999999999
+XG48+2W|VHWC+C3,South Outer Ring,False,20,353,37.0,41.0
+XG48+2W|VHWC+C3,South Outer Ring,False,21,358,32.0,35.0
+XG48+2W|VHWC+C3,South Outer Ring,False,22,362,27.0,30.0
+XG48+2W|VHWC+C3,South Outer Ring,False,23,350,24.0,25.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,0,376,19.0,20.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,1,380,18.0,19.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,2,381,17.0,18.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,3,387,17.0,17.400000000000034
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,4,385,17.0,18.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,5,385,20.0,21.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,6,184,22.0,24.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,7,252,25.0,29.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,8,318,28.0,33.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,9,340,33.0,39.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,10,360,41.0,46.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,11,353,38.0,44.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,12,358,37.0,41.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,13,379,35.0,39.19999999999999
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,14,371,35.0,39.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,15,378,36.0,39.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,16,381,37.0,42.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,17,374,39.0,43.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,18,340,41.0,47.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,19,382,39.0,45.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,20,371,33.0,38.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,21,376,30.0,34.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,22,380,26.0,30.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,23,368,22.0,25.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,0,376,40.0,44.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,1,379,38.0,40.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,2,380,37.0,38.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,3,386,36.0,38.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,4,385,37.0,38.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,5,384,38.0,39.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,6,184,40.0,42.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,7,252,43.0,50.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,8,318,48.0,53.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,9,340,51.0,56.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,10,359,53.0,59.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,11,353,56.0,60.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,12,358,57.0,62.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,13,379,58.0,63.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,14,371,58.0,65.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,15,377,60.0,67.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,16,380,63.0,70.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,17,374,68.0,74.69999999999999
+XJG4+7J|5PX4+HQ,Airport Expy,True,18,339,72.0,79.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,19,381,68.0,77.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,20,370,60.0,67.10000000000002
+XJG4+7J|5PX4+HQ,Airport Expy,True,21,376,52.0,57.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,22,380,49.0,54.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,23,368,45.0,50.0
+XJPW+92|WJP4+FF,East Inner Ring,False,0,376,21.0,23.0
+XJPW+92|WJP4+FF,East Inner Ring,False,1,380,20.0,22.0
+XJPW+92|WJP4+FF,East Inner Ring,False,2,381,18.0,20.0
+XJPW+92|WJP4+FF,East Inner Ring,False,3,387,17.0,18.0
+XJPW+92|WJP4+FF,East Inner Ring,False,4,385,17.0,17.0
+XJPW+92|WJP4+FF,East Inner Ring,False,5,385,18.0,19.0
+XJPW+92|WJP4+FF,East Inner Ring,False,6,184,20.0,21.0
+XJPW+92|WJP4+FF,East Inner Ring,False,7,252,24.0,29.0
+XJPW+92|WJP4+FF,East Inner Ring,False,8,318,31.0,37.0
+XJPW+92|WJP4+FF,East Inner Ring,False,9,340,36.0,42.0
+XJPW+92|WJP4+FF,East Inner Ring,False,10,360,38.0,44.0
+XJPW+92|WJP4+FF,East Inner Ring,False,11,353,37.0,43.0
+XJPW+92|WJP4+FF,East Inner Ring,False,12,358,37.0,41.0
+XJPW+92|WJP4+FF,East Inner Ring,False,13,379,36.0,40.0
+XJPW+92|WJP4+FF,East Inner Ring,False,14,371,36.0,40.0
+XJPW+92|WJP4+FF,East Inner Ring,False,15,378,37.0,41.0
+XJPW+92|WJP4+FF,East Inner Ring,False,16,381,40.0,44.0
+XJPW+92|WJP4+FF,East Inner Ring,False,17,374,41.0,47.0
+XJPW+92|WJP4+FF,East Inner Ring,False,18,340,44.0,52.0
+XJPW+92|WJP4+FF,East Inner Ring,False,19,382,42.0,49.0
+XJPW+92|WJP4+FF,East Inner Ring,False,20,371,37.0,43.0
+XJPW+92|WJP4+FF,East Inner Ring,False,21,376,33.0,38.5
+XJPW+92|WJP4+FF,East Inner Ring,False,22,380,30.0,36.0
+XJPW+92|WJP4+FF,East Inner Ring,False,23,368,25.0,29.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,0,376,17.0,22.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,1,380,16.0,20.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,2,381,16.0,18.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,3,387,16.0,18.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,4,385,16.0,18.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,5,385,16.0,18.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,6,184,15.0,18.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,7,252,20.0,34.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,8,318,34.0,50.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,9,340,40.0,58.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,10,360,36.0,54.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,11,353,28.0,46.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,12,358,27.0,37.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,13,379,28.0,38.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,14,371,23.0,35.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,15,378,24.0,33.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,16,381,30.0,47.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,17,374,30.0,52.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,18,340,26.0,42.10000000000002
+XMW9+G8|WMJR+V4,East Outer Ring,False,19,382,25.0,37.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,20,371,23.0,30.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,21,376,22.0,28.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,22,380,22.0,29.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,23,368,18.0,23.30000000000001
+XPC7+72|XM33+J3,Old Airport Road,False,0,376,17.0,20.0
+XPC7+72|XM33+J3,Old Airport Road,False,1,380,16.0,18.0
+XPC7+72|XM33+J3,Old Airport Road,False,2,381,15.0,16.0
+XPC7+72|XM33+J3,Old Airport Road,False,3,387,14.0,15.0
+XPC7+72|XM33+J3,Old Airport Road,False,4,385,14.0,15.0
+XPC7+72|XM33+J3,Old Airport Road,False,5,385,15.0,16.600000000000023
+XPC7+72|XM33+J3,Old Airport Road,False,6,184,16.0,18.0
+XPC7+72|XM33+J3,Old Airport Road,False,7,252,21.0,32.0
+XPC7+72|XM33+J3,Old Airport Road,False,8,318,31.0,44.0
+XPC7+72|XM33+J3,Old Airport Road,False,9,340,35.5,49.0
+XPC7+72|XM33+J3,Old Airport Road,False,10,360,34.0,45.0
+XPC7+72|XM33+J3,Old Airport Road,False,11,353,31.0,38.0
+XPC7+72|XM33+J3,Old Airport Road,False,12,358,30.0,35.0
+XPC7+72|XM33+J3,Old Airport Road,False,13,379,28.0,33.0
+XPC7+72|XM33+J3,Old Airport Road,False,14,371,28.0,32.0
+XPC7+72|XM33+J3,Old Airport Road,False,15,378,33.0,39.0
+XPC7+72|XM33+J3,Old Airport Road,False,16,381,37.0,46.0
+XPC7+72|XM33+J3,Old Airport Road,False,17,374,40.0,52.0
+XPC7+72|XM33+J3,Old Airport Road,False,18,340,37.0,49.0
+XPC7+72|XM33+J3,Old Airport Road,False,19,382,36.0,46.0
+XPC7+72|XM33+J3,Old Airport Road,False,20,371,31.0,40.0
+XPC7+72|XM33+J3,Old Airport Road,False,21,376,27.0,34.0
+XPC7+72|XM33+J3,Old Airport Road,False,22,380,23.0,28.0
+XPC7+72|XM33+J3,Old Airport Road,False,23,368,20.0,24.0

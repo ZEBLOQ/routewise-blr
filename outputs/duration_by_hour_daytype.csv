@@ -1,0 +1,625 @@
+route_code,label_short,is_airport,day_type,hour,n,median,p90
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekday,0,264,20.0,21.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekday,1,270,19.0,20.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekday,2,272,19.0,19.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekday,3,276,18.0,19.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekday,4,274,18.0,19.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekday,5,275,19.0,20.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekday,6,133,20.0,21.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekday,7,181,25.0,28.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekday,8,225,31.0,35.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekday,9,242,36.0,39.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekday,10,258,37.5,41.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekday,11,248,35.0,38.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekday,12,252,34.0,37.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekday,13,270,33.0,36.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekday,14,262,32.0,34.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekday,15,269,33.0,36.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekday,16,272,34.0,37.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekday,17,265,37.0,40.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekday,18,238,40.0,45.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekday,19,270,40.0,45.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekday,20,259,33.0,38.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekday,21,265,28.0,31.599999999999994
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekday,22,269,26.0,27.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekday,23,259,22.0,24.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekend,0,112,21.0,22.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekend,1,110,20.0,21.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekend,2,109,19.0,20.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekend,3,111,19.0,19.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekend,4,111,18.0,19.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekend,5,110,19.0,20.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekend,6,51,20.0,21.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekend,7,71,23.0,26.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekend,8,93,25.0,28.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekend,9,98,27.0,30.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekend,10,102,29.5,33.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekend,11,105,32.0,36.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekend,12,106,34.5,39.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekend,13,109,36.0,42.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekend,14,109,34.0,40.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekend,15,109,33.0,39.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekend,16,109,34.0,39.2
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekend,17,109,35.0,41.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekend,18,102,36.0,43.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekend,19,112,36.0,43.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekend,20,112,34.0,39.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekend,21,111,30.0,34.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekend,22,111,27.0,29.0
+2HM2+P8|XJV5+RG,North Inner Ring,False,weekend,23,109,23.0,25.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekday,0,264,20.0,25.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekday,1,270,18.0,21.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekday,2,272,18.0,20.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekday,3,276,17.0,19.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekday,4,274,18.0,20.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekday,5,275,18.0,21.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekday,6,133,18.0,21.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekday,7,181,28.0,36.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekday,8,225,35.0,40.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekday,9,242,39.0,44.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekday,10,258,38.0,44.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekday,11,248,37.0,43.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekday,12,252,36.0,42.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekday,13,270,32.0,38.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekday,14,262,29.0,33.900000000000006
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekday,15,269,32.0,36.20000000000002
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekday,16,272,38.0,44.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekday,17,265,39.0,46.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekday,18,238,40.0,48.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekday,19,270,38.0,44.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekday,20,259,32.0,38.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekday,21,265,27.0,33.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekday,22,269,23.0,27.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekday,23,259,21.0,24.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekend,0,112,23.0,26.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekend,1,110,20.0,24.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekend,2,109,18.0,21.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekend,3,111,18.0,20.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekend,4,111,18.0,20.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekend,5,110,18.0,20.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekend,6,51,18.0,20.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekend,7,71,20.0,22.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekend,8,93,22.0,25.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekend,9,98,24.0,27.299999999999997
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekend,10,102,27.0,30.900000000000006
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekend,11,105,30.0,35.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekend,12,106,34.0,39.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekend,13,109,35.0,40.2
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekend,14,109,32.0,39.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekend,15,109,30.0,39.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekend,16,109,31.0,39.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekend,17,109,30.0,38.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekend,18,102,34.0,42.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekend,19,112,34.0,41.900000000000006
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekend,20,112,32.0,37.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekend,21,111,27.0,32.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekend,22,111,24.0,28.0
+2HVW+G8|XJXR+WG,North Outer Ring,False,weekend,23,109,21.0,24.200000000000003
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekday,0,264,16.0,18.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekday,1,270,15.0,17.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekday,2,272,15.0,17.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekday,3,276,15.0,17.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekday,4,274,15.0,17.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekday,5,275,16.0,17.599999999999994
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekday,6,133,18.0,19.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekday,7,181,22.0,24.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekday,8,225,24.0,27.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekday,9,242,25.5,30.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekday,10,258,25.0,29.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekday,11,248,24.0,29.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekday,12,252,24.0,28.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekday,13,270,24.0,27.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekday,14,262,22.0,25.900000000000006
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekday,15,269,23.0,26.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekday,16,272,25.0,29.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekday,17,265,26.0,31.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekday,18,238,29.0,33.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekday,19,270,27.5,32.099999999999994
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekday,20,259,23.0,28.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekday,21,265,21.0,25.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekday,22,269,20.0,23.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekday,23,259,19.0,21.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekend,0,112,16.0,19.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekend,1,110,16.0,18.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekend,2,109,15.0,17.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekend,3,111,15.0,17.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekend,4,111,15.0,17.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekend,5,110,16.0,17.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekend,6,51,18.0,19.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekend,7,71,19.0,21.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekend,8,93,20.0,22.799999999999997
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekend,9,98,20.0,23.299999999999997
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekend,10,102,22.0,25.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekend,11,105,23.0,26.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekend,12,106,25.0,28.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekend,13,109,24.0,30.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekend,14,109,24.0,29.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekend,15,109,23.0,28.200000000000003
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekend,16,109,23.0,29.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekend,17,109,24.0,29.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekend,18,102,25.0,30.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekend,19,112,25.0,31.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekend,20,112,22.0,26.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekend,21,111,20.0,23.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekend,22,111,19.0,21.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,weekend,23,109,18.0,20.0
+WGG8+G5|XH7P+G6,Mysore Road,False,weekday,0,260,18.0,19.0
+WGG8+G5|XH7P+G6,Mysore Road,False,weekday,1,267,18.0,18.400000000000006
+WGG8+G5|XH7P+G6,Mysore Road,False,weekday,2,269,17.0,18.0
+WGG8+G5|XH7P+G6,Mysore Road,False,weekday,3,273,17.0,17.0
+WGG8+G5|XH7P+G6,Mysore Road,False,weekday,4,271,17.0,18.0
+WGG8+G5|XH7P+G6,Mysore Road,False,weekday,5,272,18.0,19.0
+WGG8+G5|XH7P+G6,Mysore Road,False,weekday,6,133,19.0,20.0
+WGG8+G5|XH7P+G6,Mysore Road,False,weekday,7,178,22.0,26.0
+WGG8+G5|XH7P+G6,Mysore Road,False,weekday,8,222,25.0,37.0
+WGG8+G5|XH7P+G6,Mysore Road,False,weekday,9,239,37.0,44.0
+WGG8+G5|XH7P+G6,Mysore Road,False,weekday,10,255,39.0,46.0
+WGG8+G5|XH7P+G6,Mysore Road,False,weekday,11,245,34.0,41.0
+WGG8+G5|XH7P+G6,Mysore Road,False,weekday,12,249,33.0,37.0
+WGG8+G5|XH7P+G6,Mysore Road,False,weekday,13,267,31.0,35.0
+WGG8+G5|XH7P+G6,Mysore Road,False,weekday,14,258,29.0,32.30000000000001
+WGG8+G5|XH7P+G6,Mysore Road,False,weekday,15,265,29.0,33.0
+WGG8+G5|XH7P+G6,Mysore Road,False,weekday,16,268,30.0,34.0
+WGG8+G5|XH7P+G6,Mysore Road,False,weekday,17,261,31.0,36.0
+WGG8+G5|XH7P+G6,Mysore Road,False,weekday,18,234,34.0,42.0
+WGG8+G5|XH7P+G6,Mysore Road,False,weekday,19,266,34.0,42.0
+WGG8+G5|XH7P+G6,Mysore Road,False,weekday,20,255,30.0,37.0
+WGG8+G5|XH7P+G6,Mysore Road,False,weekday,21,261,26.0,30.0
+WGG8+G5|XH7P+G6,Mysore Road,False,weekday,22,265,23.0,27.0
+WGG8+G5|XH7P+G6,Mysore Road,False,weekday,23,255,20.0,22.0
+WGG8+G5|XH7P+G6,Mysore Road,False,weekend,0,110,19.0,20.0
+WGG8+G5|XH7P+G6,Mysore Road,False,weekend,1,108,18.0,19.0
+WGG8+G5|XH7P+G6,Mysore Road,False,weekend,2,107,17.0,18.0
+WGG8+G5|XH7P+G6,Mysore Road,False,weekend,3,109,17.0,18.0
+WGG8+G5|XH7P+G6,Mysore Road,False,weekend,4,109,17.0,18.0
+WGG8+G5|XH7P+G6,Mysore Road,False,weekend,5,108,18.0,19.0
+WGG8+G5|XH7P+G6,Mysore Road,False,weekend,6,51,19.0,20.0
+WGG8+G5|XH7P+G6,Mysore Road,False,weekend,7,69,21.0,22.0
+WGG8+G5|XH7P+G6,Mysore Road,False,weekend,8,91,22.0,26.0
+WGG8+G5|XH7P+G6,Mysore Road,False,weekend,9,96,23.0,29.0
+WGG8+G5|XH7P+G6,Mysore Road,False,weekend,10,100,26.5,34.0
+WGG8+G5|XH7P+G6,Mysore Road,False,weekend,11,103,30.0,37.0
+WGG8+G5|XH7P+G6,Mysore Road,False,weekend,12,104,33.0,42.7
+WGG8+G5|XH7P+G6,Mysore Road,False,weekend,13,107,32.0,40.0
+WGG8+G5|XH7P+G6,Mysore Road,False,weekend,14,107,31.0,39.0
+WGG8+G5|XH7P+G6,Mysore Road,False,weekend,15,107,31.0,40.0
+WGG8+G5|XH7P+G6,Mysore Road,False,weekend,16,107,31.0,38.400000000000006
+WGG8+G5|XH7P+G6,Mysore Road,False,weekend,17,107,30.0,39.400000000000006
+WGG8+G5|XH7P+G6,Mysore Road,False,weekend,18,100,33.0,43.10000000000001
+WGG8+G5|XH7P+G6,Mysore Road,False,weekend,19,110,35.5,45.0
+WGG8+G5|XH7P+G6,Mysore Road,False,weekend,20,110,31.0,39.0
+WGG8+G5|XH7P+G6,Mysore Road,False,weekend,21,109,27.0,32.0
+WGG8+G5|XH7P+G6,Mysore Road,False,weekend,22,109,26.0,31.0
+WGG8+G5|XH7P+G6,Mysore Road,False,weekend,23,107,22.0,25.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekday,0,264,16.0,17.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekday,1,270,15.0,16.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekday,2,272,15.0,16.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekday,3,276,15.0,16.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekday,4,274,15.0,16.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekday,5,275,16.0,17.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekday,6,133,18.0,20.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekday,7,181,25.0,28.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekday,8,225,26.0,31.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekday,9,242,30.0,33.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekday,10,258,31.0,36.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekday,11,248,30.0,33.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekday,12,252,28.0,31.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekday,13,270,27.0,29.099999999999994
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekday,14,262,25.0,27.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekday,15,269,25.0,27.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekday,16,272,26.0,28.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekday,17,265,27.0,30.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekday,18,238,30.0,33.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekday,19,270,29.0,33.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekday,20,259,26.0,30.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekday,21,265,23.0,25.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekday,22,269,20.0,22.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekday,23,259,17.0,19.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekend,0,112,16.0,17.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekend,1,110,16.0,17.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekend,2,109,16.0,17.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekend,3,111,15.0,16.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekend,4,111,15.0,16.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekend,5,110,16.0,17.10000000000001
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekend,6,51,18.0,19.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekend,7,71,19.0,21.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekend,8,93,21.0,22.799999999999997
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekend,9,98,22.0,24.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekend,10,102,24.0,26.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekend,11,105,25.0,28.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekend,12,106,26.0,31.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekend,13,109,25.0,30.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekend,14,109,26.0,30.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekend,15,109,25.0,30.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekend,16,109,26.0,29.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekend,17,109,26.0,30.200000000000003
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekend,18,102,29.0,32.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekend,19,112,29.0,33.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekend,20,112,26.0,30.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekend,21,111,24.0,27.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekend,22,111,21.0,24.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,weekend,23,109,19.0,21.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekday,0,264,23.0,24.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekday,1,270,22.0,23.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekday,2,272,20.0,21.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekday,3,276,20.0,20.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekday,4,274,20.0,20.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekday,5,275,21.0,22.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekday,6,133,24.0,25.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekday,7,181,29.0,35.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekday,8,225,36.0,41.599999999999994
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekday,9,242,43.0,46.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekday,10,258,44.0,49.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekday,11,248,42.0,46.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekday,12,252,42.0,45.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekday,13,270,41.0,44.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekday,14,262,40.0,43.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekday,15,269,41.0,47.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekday,16,272,41.0,45.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekday,17,265,43.0,46.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekday,18,238,44.0,48.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekday,19,270,42.0,47.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekday,20,259,36.0,40.20000000000002
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekday,21,265,32.0,36.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekday,22,269,29.0,32.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekday,23,259,25.0,28.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekend,0,112,25.0,26.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekend,1,110,23.0,24.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekend,2,109,21.0,22.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekend,3,111,20.0,21.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekend,4,111,20.0,21.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekend,5,110,21.0,22.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekend,6,51,24.0,25.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekend,7,71,27.0,28.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekend,8,93,29.0,31.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekend,9,98,31.0,34.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekend,10,102,33.0,36.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekend,11,105,36.0,39.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekend,12,106,39.0,44.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekend,13,109,40.0,46.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekend,14,109,40.0,47.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekend,15,109,39.0,45.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekend,16,109,40.0,46.2
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekend,17,109,40.0,45.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekend,18,102,42.0,47.900000000000006
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekend,19,112,42.0,48.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekend,20,112,38.0,45.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekend,21,111,36.0,42.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekend,22,111,32.0,37.0
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,weekend,23,109,28.0,31.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekday,0,257,21.0,23.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekday,1,263,20.0,22.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekday,2,265,19.0,20.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekday,3,269,18.0,20.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekday,4,267,18.0,20.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekday,5,268,19.0,21.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekday,6,133,19.0,20.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekday,7,174,25.0,34.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekday,8,218,36.0,46.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekday,9,235,41.0,54.599999999999994
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekday,10,251,41.0,56.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekday,11,241,37.0,49.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekday,12,245,34.0,42.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekday,13,263,30.0,35.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekday,14,254,28.0,34.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekday,15,261,38.0,42.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekday,16,264,37.0,43.70000000000002
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekday,17,258,40.0,46.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekday,18,231,43.0,51.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekday,19,263,43.0,51.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekday,20,252,37.0,44.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekday,21,258,31.0,39.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekday,22,262,25.0,29.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekday,23,252,22.0,24.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekend,0,108,23.5,26.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekend,1,106,23.0,25.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekend,2,105,20.0,22.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekend,3,107,19.0,21.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekend,4,107,18.0,20.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekend,5,106,19.0,21.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekend,6,51,18.0,19.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekend,7,67,19.0,22.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekend,8,89,21.0,23.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekend,9,94,22.0,24.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekend,10,98,25.0,29.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekend,11,101,29.0,33.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekend,12,102,32.0,38.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekend,13,105,33.0,42.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekend,14,105,30.0,39.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekend,15,105,30.0,38.60000000000001
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekend,16,105,30.0,37.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekend,17,105,31.0,36.60000000000001
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekend,18,98,35.0,42.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekend,19,108,36.0,43.3
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekend,20,108,33.0,39.3
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekend,21,107,29.0,34.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekend,22,107,26.0,29.0
+WP44+W8|WJFH+XQ,Sarjapur Road,False,weekend,23,105,23.0,25.0
+XG48+2W|VHWC+C3,South Outer Ring,False,weekday,0,250,21.0,22.0
+XG48+2W|VHWC+C3,South Outer Ring,False,weekday,1,256,20.0,21.0
+XG48+2W|VHWC+C3,South Outer Ring,False,weekday,2,258,19.0,20.0
+XG48+2W|VHWC+C3,South Outer Ring,False,weekday,3,262,19.0,20.0
+XG48+2W|VHWC+C3,South Outer Ring,False,weekday,4,261,20.0,21.0
+XG48+2W|VHWC+C3,South Outer Ring,False,weekday,5,262,21.0,22.0
+XG48+2W|VHWC+C3,South Outer Ring,False,weekday,6,120,22.0,24.0
+XG48+2W|VHWC+C3,South Outer Ring,False,weekday,7,168,28.5,31.0
+XG48+2W|VHWC+C3,South Outer Ring,False,weekday,8,212,32.0,35.0
+XG48+2W|VHWC+C3,South Outer Ring,False,weekday,9,229,35.0,38.0
+XG48+2W|VHWC+C3,South Outer Ring,False,weekday,10,245,36.0,38.599999999999994
+XG48+2W|VHWC+C3,South Outer Ring,False,weekday,11,235,36.0,39.0
+XG48+2W|VHWC+C3,South Outer Ring,False,weekday,12,239,37.0,39.0
+XG48+2W|VHWC+C3,South Outer Ring,False,weekday,13,257,36.0,38.0
+XG48+2W|VHWC+C3,South Outer Ring,False,weekday,14,249,35.0,37.0
+XG48+2W|VHWC+C3,South Outer Ring,False,weekday,15,256,36.0,39.0
+XG48+2W|VHWC+C3,South Outer Ring,False,weekday,16,259,38.0,41.0
+XG48+2W|VHWC+C3,South Outer Ring,False,weekday,17,253,39.0,42.0
+XG48+2W|VHWC+C3,South Outer Ring,False,weekday,18,225,42.0,46.0
+XG48+2W|VHWC+C3,South Outer Ring,False,weekday,19,257,42.0,46.400000000000006
+XG48+2W|VHWC+C3,South Outer Ring,False,weekday,20,246,37.0,41.0
+XG48+2W|VHWC+C3,South Outer Ring,False,weekday,21,252,32.0,35.0
+XG48+2W|VHWC+C3,South Outer Ring,False,weekday,22,256,27.0,29.0
+XG48+2W|VHWC+C3,South Outer Ring,False,weekday,23,246,23.0,25.0
+XG48+2W|VHWC+C3,South Outer Ring,False,weekend,0,107,21.0,22.0
+XG48+2W|VHWC+C3,South Outer Ring,False,weekend,1,105,20.0,21.0
+XG48+2W|VHWC+C3,South Outer Ring,False,weekend,2,104,20.0,21.0
+XG48+2W|VHWC+C3,South Outer Ring,False,weekend,3,106,19.0,21.0
+XG48+2W|VHWC+C3,South Outer Ring,False,weekend,4,106,20.0,21.0
+XG48+2W|VHWC+C3,South Outer Ring,False,weekend,5,105,21.0,22.60000000000001
+XG48+2W|VHWC+C3,South Outer Ring,False,weekend,6,46,21.0,24.0
+XG48+2W|VHWC+C3,South Outer Ring,False,weekend,7,66,25.0,30.0
+XG48+2W|VHWC+C3,South Outer Ring,False,weekend,8,88,29.0,33.0
+XG48+2W|VHWC+C3,South Outer Ring,False,weekend,9,93,31.0,35.0
+XG48+2W|VHWC+C3,South Outer Ring,False,weekend,10,97,34.0,37.0
+XG48+2W|VHWC+C3,South Outer Ring,False,weekend,11,100,37.0,40.10000000000001
+XG48+2W|VHWC+C3,South Outer Ring,False,weekend,12,101,39.0,43.0
+XG48+2W|VHWC+C3,South Outer Ring,False,weekend,13,104,38.0,44.0
+XG48+2W|VHWC+C3,South Outer Ring,False,weekend,14,104,36.0,42.0
+XG48+2W|VHWC+C3,South Outer Ring,False,weekend,15,104,36.0,40.7
+XG48+2W|VHWC+C3,South Outer Ring,False,weekend,16,104,36.0,40.7
+XG48+2W|VHWC+C3,South Outer Ring,False,weekend,17,104,38.0,42.0
+XG48+2W|VHWC+C3,South Outer Ring,False,weekend,18,97,41.0,47.0
+XG48+2W|VHWC+C3,South Outer Ring,False,weekend,19,107,41.0,46.400000000000006
+XG48+2W|VHWC+C3,South Outer Ring,False,weekend,20,107,37.0,41.0
+XG48+2W|VHWC+C3,South Outer Ring,False,weekend,21,106,33.0,36.0
+XG48+2W|VHWC+C3,South Outer Ring,False,weekend,22,106,28.0,30.0
+XG48+2W|VHWC+C3,South Outer Ring,False,weekend,23,104,24.0,26.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekday,0,264,19.0,20.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekday,1,270,18.0,19.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekday,2,272,17.0,18.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekday,3,276,17.0,17.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekday,4,274,17.0,18.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekday,5,275,20.0,21.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekday,6,133,22.0,24.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekday,7,181,25.0,30.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekday,8,225,29.0,34.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekday,9,242,35.0,39.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekday,10,258,42.0,47.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekday,11,248,40.0,45.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekday,12,252,38.0,42.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekday,13,270,36.0,40.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekday,14,262,35.0,38.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekday,15,269,36.0,39.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekday,16,272,38.0,42.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekday,17,265,40.0,43.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekday,18,238,42.0,47.30000000000001
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekday,19,270,39.0,45.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekday,20,259,33.0,37.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekday,21,265,29.0,33.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekday,22,269,25.0,29.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekday,23,259,21.0,24.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekend,0,112,20.0,21.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekend,1,110,19.0,19.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekend,2,109,17.0,18.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekend,3,111,17.0,18.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekend,4,111,17.0,18.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekend,5,110,20.0,22.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekend,6,51,22.0,23.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekend,7,71,24.0,26.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekend,8,93,26.0,28.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekend,9,98,27.0,32.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekend,10,102,30.5,38.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekend,11,105,31.0,37.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekend,12,106,33.0,39.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekend,13,109,33.0,39.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekend,14,109,34.0,40.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekend,15,109,35.0,40.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekend,16,109,35.0,41.2
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekend,17,109,36.0,42.2
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekend,18,102,39.0,46.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekend,19,112,38.0,44.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekend,20,112,34.0,39.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekend,21,111,31.0,35.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekend,22,111,27.0,31.0
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,weekend,23,109,23.0,25.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekday,0,264,40.0,42.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekday,1,269,37.0,39.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekday,2,271,36.0,37.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekday,3,275,36.0,37.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekday,4,274,37.0,38.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekday,5,274,38.0,39.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekday,6,133,40.0,42.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekday,7,181,43.0,51.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekday,8,225,49.0,54.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekday,9,242,52.0,56.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekday,10,257,54.0,60.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekday,11,248,56.0,60.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekday,12,252,57.0,61.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekday,13,270,58.0,62.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekday,14,262,58.0,62.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekday,15,268,60.0,65.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekday,16,271,63.0,69.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekday,17,265,68.0,74.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekday,18,237,74.0,80.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekday,19,269,71.0,78.20000000000002
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekday,20,258,62.0,68.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekday,21,265,53.0,57.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekday,22,269,49.0,52.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekday,23,259,45.0,49.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekend,0,112,42.0,46.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekend,1,110,39.0,42.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekend,2,109,38.0,39.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekend,3,111,37.0,38.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekend,4,111,38.0,39.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekend,5,110,39.0,40.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekend,6,51,40.0,42.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekend,7,71,43.0,46.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekend,8,93,45.0,50.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekend,9,98,47.0,51.3
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekend,10,102,50.0,55.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekend,11,105,54.0,58.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekend,12,106,57.0,62.5
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekend,13,109,58.0,65.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekend,14,109,59.0,69.2
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekend,15,109,61.0,70.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekend,16,109,63.0,74.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekend,17,109,64.0,75.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekend,18,102,61.5,73.9
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekend,19,112,58.0,69.9
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekend,20,112,54.0,63.900000000000006
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekend,21,111,51.0,57.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekend,22,111,49.0,56.0
+XJG4+7J|5PX4+HQ,Airport Expy,True,weekend,23,109,46.0,52.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekday,0,264,21.0,23.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekday,1,270,19.0,21.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekday,2,272,18.0,19.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekday,3,276,17.0,17.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekday,4,274,17.0,17.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekday,5,275,18.0,19.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekday,6,133,20.0,21.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekday,7,181,25.0,30.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekday,8,225,33.0,38.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekday,9,242,39.0,43.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekday,10,258,40.0,45.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekday,11,248,39.0,43.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekday,12,252,38.0,41.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekday,13,270,37.0,40.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekday,14,262,36.0,40.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekday,15,269,37.0,42.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekday,16,272,41.0,45.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekday,17,265,43.0,47.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekday,18,238,46.5,52.30000000000001
+XJPW+92|WJP4+FF,East Inner Ring,False,weekday,19,270,44.0,50.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekday,20,259,37.0,43.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekday,21,265,33.0,38.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekday,22,269,30.0,35.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekday,23,259,25.0,28.200000000000017
+XJPW+92|WJP4+FF,East Inner Ring,False,weekend,0,112,22.5,24.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekend,1,110,22.0,24.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekend,2,109,19.0,21.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekend,3,111,17.0,18.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekend,4,111,17.0,18.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekend,5,110,18.0,19.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekend,6,51,19.0,21.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekend,7,71,23.0,26.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekend,8,93,26.0,28.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekend,9,98,27.0,28.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekend,10,102,29.0,31.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekend,11,105,31.0,34.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekend,12,106,34.5,38.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekend,13,109,36.0,39.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekend,14,109,35.0,39.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekend,15,109,35.0,38.2
+XJPW+92|WJP4+FF,East Inner Ring,False,weekend,16,109,35.0,40.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekend,17,109,36.0,41.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekend,18,102,38.0,42.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekend,19,112,37.5,44.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekend,20,112,35.5,41.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekend,21,111,34.0,39.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekend,22,111,31.0,36.0
+XJPW+92|WJP4+FF,East Inner Ring,False,weekend,23,109,26.0,30.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekday,0,264,17.0,21.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekday,1,270,16.0,19.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekday,2,272,15.0,18.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekday,3,276,15.5,18.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekday,4,274,16.0,18.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekday,5,275,16.0,18.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekday,6,133,15.0,18.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekday,7,181,22.0,35.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekday,8,225,39.0,52.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekday,9,242,48.5,59.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekday,10,258,44.0,55.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekday,11,248,35.0,48.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekday,12,252,30.0,38.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekday,13,270,31.5,40.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekday,14,262,25.0,36.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekday,15,269,26.0,36.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekday,16,272,36.0,50.900000000000006
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekday,17,265,36.0,54.599999999999994
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekday,18,238,29.0,47.30000000000001
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekday,19,270,26.0,39.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekday,20,259,24.0,33.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekday,21,265,23.0,29.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekday,22,269,23.0,29.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekday,23,259,18.0,24.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekend,0,112,18.0,24.900000000000006
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekend,1,110,18.0,23.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekend,2,109,16.0,19.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekend,3,111,16.0,18.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekend,4,111,16.0,18.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekend,5,110,16.0,18.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekend,6,51,15.0,17.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekend,7,71,15.0,17.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekend,8,93,16.0,18.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekend,9,98,17.0,19.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekend,10,102,17.0,20.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekend,11,105,18.0,21.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekend,12,106,20.0,22.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekend,13,109,22.0,25.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekend,14,109,19.0,23.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekend,15,109,19.0,22.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekend,16,109,21.0,24.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekend,17,109,21.0,25.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekend,18,102,21.0,25.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekend,19,112,22.0,25.900000000000006
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekend,20,112,21.0,25.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekend,21,111,21.0,25.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekend,22,111,22.0,25.0
+XMW9+G8|WMJR+V4,East Outer Ring,False,weekend,23,109,19.0,23.0
+XPC7+72|XM33+J3,Old Airport Road,False,weekday,0,264,17.0,19.0
+XPC7+72|XM33+J3,Old Airport Road,False,weekday,1,270,15.0,16.099999999999994
+XPC7+72|XM33+J3,Old Airport Road,False,weekday,2,272,15.0,15.0
+XPC7+72|XM33+J3,Old Airport Road,False,weekday,3,276,14.0,15.0
+XPC7+72|XM33+J3,Old Airport Road,False,weekday,4,274,14.0,15.0
+XPC7+72|XM33+J3,Old Airport Road,False,weekday,5,275,15.0,16.599999999999994
+XPC7+72|XM33+J3,Old Airport Road,False,weekday,6,133,16.0,18.799999999999997
+XPC7+72|XM33+J3,Old Airport Road,False,weekday,7,181,22.0,33.0
+XPC7+72|XM33+J3,Old Airport Road,False,weekday,8,225,35.0,45.0
+XPC7+72|XM33+J3,Old Airport Road,False,weekday,9,242,41.0,49.0
+XPC7+72|XM33+J3,Old Airport Road,False,weekday,10,258,38.0,46.0
+XPC7+72|XM33+J3,Old Airport Road,False,weekday,11,248,34.0,39.0
+XPC7+72|XM33+J3,Old Airport Road,False,weekday,12,252,30.0,35.0
+XPC7+72|XM33+J3,Old Airport Road,False,weekday,13,270,28.0,33.0
+XPC7+72|XM33+J3,Old Airport Road,False,weekday,14,262,28.0,32.0
+XPC7+72|XM33+J3,Old Airport Road,False,weekday,15,269,34.0,39.0
+XPC7+72|XM33+J3,Old Airport Road,False,weekday,16,272,40.0,47.0
+XPC7+72|XM33+J3,Old Airport Road,False,weekday,17,265,44.0,53.0
+XPC7+72|XM33+J3,Old Airport Road,False,weekday,18,238,41.0,50.0
+XPC7+72|XM33+J3,Old Airport Road,False,weekday,19,270,37.0,47.099999999999994
+XPC7+72|XM33+J3,Old Airport Road,False,weekday,20,259,33.0,41.0
+XPC7+72|XM33+J3,Old Airport Road,False,weekday,21,265,28.0,34.0
+XPC7+72|XM33+J3,Old Airport Road,False,weekday,22,269,24.0,29.0
+XPC7+72|XM33+J3,Old Airport Road,False,weekday,23,259,20.0,24.0
+XPC7+72|XM33+J3,Old Airport Road,False,weekend,0,112,19.0,22.0
+XPC7+72|XM33+J3,Old Airport Road,False,weekend,1,110,17.0,19.0
+XPC7+72|XM33+J3,Old Airport Road,False,weekend,2,109,16.0,17.0
+XPC7+72|XM33+J3,Old Airport Road,False,weekend,3,111,15.0,16.0
+XPC7+72|XM33+J3,Old Airport Road,False,weekend,4,111,15.0,15.0
+XPC7+72|XM33+J3,Old Airport Road,False,weekend,5,110,15.0,16.10000000000001
+XPC7+72|XM33+J3,Old Airport Road,False,weekend,6,51,16.0,17.0
+XPC7+72|XM33+J3,Old Airport Road,False,weekend,7,71,18.0,20.0
+XPC7+72|XM33+J3,Old Airport Road,False,weekend,8,93,20.0,21.0
+XPC7+72|XM33+J3,Old Airport Road,False,weekend,9,98,21.0,22.0
+XPC7+72|XM33+J3,Old Airport Road,False,weekend,10,102,23.0,25.0
+XPC7+72|XM33+J3,Old Airport Road,False,weekend,11,105,26.0,30.0
+XPC7+72|XM33+J3,Old Airport Road,False,weekend,12,106,29.0,33.0
+XPC7+72|XM33+J3,Old Airport Road,False,weekend,13,109,29.0,33.0
+XPC7+72|XM33+J3,Old Airport Road,False,weekend,14,109,27.0,32.0
+XPC7+72|XM33+J3,Old Airport Road,False,weekend,15,109,28.0,36.0
+XPC7+72|XM33+J3,Old Airport Road,False,weekend,16,109,29.0,35.2
+XPC7+72|XM33+J3,Old Airport Road,False,weekend,17,109,30.0,34.0
+XPC7+72|XM33+J3,Old Airport Road,False,weekend,18,102,31.0,37.0
+XPC7+72|XM33+J3,Old Airport Road,False,weekend,19,112,32.0,39.0
+XPC7+72|XM33+J3,Old Airport Road,False,weekend,20,112,29.0,34.900000000000006
+XPC7+72|XM33+J3,Old Airport Road,False,weekend,21,111,25.0,30.0
+XPC7+72|XM33+J3,Old Airport Road,False,weekend,22,111,23.0,26.0
+XPC7+72|XM33+J3,Old Airport Road,False,weekend,23,109,20.0,23.0

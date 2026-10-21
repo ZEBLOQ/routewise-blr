@@ -1,0 +1,14 @@
+route_code,label_short,is_airport,weekday,weekend,weekday_minus_weekend_min,weekday_pct_above_weekend
+2HM2+P8|XJV5+RG,North Inner Ring,False,30.0,29.0,1.0,3.4482758620689653
+2HVW+G8|XJXR+WG,North Outer Ring,False,29.0,25.0,4.0,16.0
+VJRQ+2M|RMJJ+F4,Hosur Road,False,22.0,20.0,2.0,10.0
+WGG8+G5|XH7P+G6,Mysore Road,False,27.0,25.0,2.0,8.0
+WH5F+26|WJ8X+F5W,Double Decker Flyover,False,24.0,23.0,1.0,4.3478260869565215
+WHR9+R6|XJGF+6J,Central Diagonal 2,False,36.0,33.0,3.0,9.090909090909092
+WP44+W8|WJFH+XQ,Sarjapur Road,False,29.0,26.0,3.0,11.538461538461538
+XG48+2W|VHWC+C3,South Outer Ring,False,33.0,32.0,1.0,3.125
+XHJ7+MG|WJM6+VC,Central Diagonal 1,False,31.0,28.0,3.0,10.714285714285714
+XJG4+7J|5PX4+HQ,Airport Expy,True,52.0,50.0,2.0,4.0
+XJPW+92|WJP4+FF,East Inner Ring,False,34.0,30.0,4.0,13.333333333333334
+XMW9+G8|WMJR+V4,East Outer Ring,False,23.0,18.0,5.0,27.77777777777778
+XPC7+72|XM33+J3,Old Airport Road,False,28.0,23.0,5.0,21.73913043478261

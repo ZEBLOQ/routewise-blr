@@ -1,0 +1,216 @@
+{
+  "total_rows_raw": 111637,
+  "date_min": "2025-09-25",
+  "date_max": "2026-10-21",
+  "n_routes": 13,
+  "exact_duplicate_rows": 0,
+  "dup_route_date_time": 0,
+  "rows_in_multi_reading_hours": 1794,
+  "unique_route_date_hour": 110441,
+  "missing_duration": 0,
+  "missing_timestamp": 0,
+  "invalid_duration_lt10": 2,
+  "invalid_rows": [
+    {
+      "date": "2026-10-12",
+      "time": "15:25",
+      "route": "Airport Expy",
+      "duration": 2,
+      "distance_km": 34.0
+    },
+    {
+      "date": "2026-10-19",
+      "time": "19:25",
+      "route": "Airport Expy",
+      "duration": 3,
+      "distance_km": 35.2
+    }
+  ],
+  "duration_min": 2.0,
+  "duration_max": 107.0,
+  "per_route": [
+    {
+      "route_code": "2HM2+P8|XJV5+RG",
+      "readings": 8651,
+      "dist_median": 10.6,
+      "dist_min": 9.3,
+      "dist_max": 16.5,
+      "dur_median": 30.0,
+      "label_short": "North Inner Ring",
+      "label_full": "Jaya Prakash Narayana Park \u2192 Coles Park, Fraser Town"
+    },
+    {
+      "route_code": "2HVW+G8|XJXR+WG",
+      "readings": 8651,
+      "dist_median": 9.7,
+      "dist_min": 9.6,
+      "dist_max": 16.1,
+      "dur_median": 27.0,
+      "label_short": "North Outer Ring",
+      "label_full": "Bethel AG Church, Hebbal \u2192 SMVT Railway Station"
+    },
+    {
+      "route_code": "VJRQ+2M|RMJJ+F4",
+      "readings": 8651,
+      "dist_median": 10.4,
+      "dist_min": 9.6,
+      "dist_max": 18.3,
+      "dur_median": 21.0,
+      "label_short": "Hosur Road",
+      "label_full": "Kudlu Gate Metro Station \u2192 Biocon Campus"
+    },
+    {
+      "route_code": "WGG8+G5|XH7P+G6",
+      "readings": 8525,
+      "dist_median": 9.9,
+      "dist_min": 9.9,
+      "dist_max": 14.1,
+      "dur_median": 26.0,
+      "label_short": "Mysore Road",
+      "label_full": "The Watering Hole, Rajarajeshwari Nagar \u2192 Sir Puttanna Chetty Town Hall, Bangalore"
+    },
+    {
+      "route_code": "WH5F+26|WJ8X+F5W",
+      "readings": 8651,
+      "dist_median": 10.1,
+      "dist_min": 9.5,
+      "dist_max": 13.1,
+      "dur_median": 24.0,
+      "label_short": "Double Decker Flyover",
+      "label_full": "Jaya Prakash Nagar Metro Station \u2192 Hemavathi Park, HSR Layout"
+    },
+    {
+      "route_code": "WHR9+R6|XJGF+6J",
+      "readings": 8651,
+      "dist_median": 10.2,
+      "dist_min": 9.2,
+      "dist_max": 13.9,
+      "dur_median": 34.0,
+      "label_short": "Central Diagonal 2",
+      "label_full": "Big Bull Temple, Basavanagudi \u2192 Shri Someshwara Swamy Temple, Halasuru"
+    },
+    {
+      "route_code": "WP44+W8|WJFH+XQ",
+      "readings": 8395,
+      "dist_median": 10.1,
+      "dist_min": 9.8,
+      "dist_max": 25.8,
+      "dur_median": 28.0,
+      "label_short": "Sarjapur Road",
+      "label_full": "Karmelaram Railway Station, Chikkabellandur \u2192 St. Francis College, Koramangala"
+    },
+    {
+      "route_code": "XG48+2W|VHWC+C3",
+      "readings": 8216,
+      "dist_median": 10.6,
+      "dist_min": 9.5,
+      "dist_max": 21.6,
+      "dur_median": 33.0,
+      "label_short": "South Outer Ring",
+      "label_full": "National Law School of India University \u2192 Yelachenahalli Metro Station"
+    },
+    {
+      "route_code": "XHJ7+MG|WJM6+VC",
+      "readings": 8651,
+      "dist_median": 10.5,
+      "dist_min": 9.5,
+      "dist_max": 13.5,
+      "dur_median": 30.0,
+      "label_short": "Central Diagonal 1",
+      "label_full": "Lulu Mall Bengaluru \u2192 Nexus Mall Koramangala"
+    },
+    {
+      "route_code": "XJG4+7J|5PX4+HQ",
+      "readings": 8642,
+      "dist_median": 34.3,
+      "dist_min": 32.4,
+      "dist_max": 38.6,
+      "dur_median": 51.0,
+      "label_short": "Airport Expy",
+      "label_full": "MG Road Metro Station \u2192 Kempegowda International Airport, Bengaluru"
+    },
+    {
+      "route_code": "XJPW+92|WJP4+FF",
+      "readings": 8651,
+      "dist_median": 10.5,
+      "dist_min": 9.2,
+      "dist_max": 13.9,
+      "dur_median": 32.0,
+      "label_short": "East Inner Ring",
+      "label_full": "Swami Vivekananda Road Metro Station \u2192 Christ University, Hosur Main Road"
+    },
+    {
+      "route_code": "XMW9+G8|WMJR+V4",
+      "readings": 8651,
+      "dist_median": 10.0,
+      "dist_min": 9.8,
+      "dist_max": 15.3,
+      "dur_median": 21.0,
+      "label_short": "East Outer Ring",
+      "label_full": "Benniganahalli Metro Station \u2192 Embassy TechVillage, Devarabisanahalli"
+    },
+    {
+      "route_code": "XPC7+72|XM33+J3",
+      "readings": 8651,
+      "dist_median": 9.4,
+      "dist_min": 4.3,
+      "dist_max": 15.2,
+      "dur_median": 26.0,
+      "label_short": "Old Airport Road",
+      "label_full": "The Rameshwaram Cafe @ Brookfield \u2192 Gawky Goose, Wind Tunnel Rd"
+    }
+  ],
+  "weather_columns": {
+    "temp": {
+      "populated_rows": 23386,
+      "pct_of_all_rows": 20.95,
+      "first_date": "2026-05-24",
+      "last_date": "2026-10-21"
+    },
+    "realfeel": {
+      "populated_rows": 23386,
+      "pct_of_all_rows": 20.95,
+      "first_date": "2026-05-24",
+      "last_date": "2026-10-21"
+    },
+    "humidity": {
+      "populated_rows": 23254,
+      "pct_of_all_rows": 20.83,
+      "first_date": "2026-05-24",
+      "last_date": "2026-10-21"
+    },
+    "rsi_flag": {
+      "populated_rows": 1825,
+      "pct_of_all_rows": 1.63,
+      "first_date": "2026-05-24",
+      "last_date": "2026-10-18"
+    },
+    "aqi": {
+      "populated_rows": 23437,
+      "pct_of_all_rows": 20.99,
+      "first_date": "2026-05-24",
+      "last_date": "2026-10-21"
+    }
+  },
+  "rsi_values": {
+    "Light Rain": 1475,
+    "Rain": 350
+  },
+  "weather_days_with_temp": 78,
+  "weather_span": [
+    "2026-05-24",
+    "2026-10-21"
+  ],
+  "weather_gap_ranges": [
+    [
+      "2026-07-29",
+      "2026-10-09",
+      73
+    ]
+  ],
+  "rows_from_weather_start": 47223,
+  "temp_pct_from_weather_start": 49.52,
+  "cleaned_hourly_rows": 110440,
+  "cleaned_date_min": "2025-09-25",
+  "cleaned_date_max": "2026-10-21"
+}
