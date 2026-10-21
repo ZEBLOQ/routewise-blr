@@ -300,3 +300,27 @@ level is a stated constant (95%), not a tuned parameter — the full
 per-hour table (travel median, travel P90, typical arrival, P90 arrival,
 on-time %) is shown behind every answer so the dispatcher can see
 exactly how close to the cliff each departure hour is.
+
+### Overnight and next-day plans
+
+The first version of this view took a goods-ready hour and a deadline
+hour on the same implied day, which ruled out a completely ordinary
+case: production finishing in the evening for a next-morning delivery.
+The view is now date-aware — goods-ready and deliver-by are a date
+plus an hour each, with windows of up to 72 hours — and every
+candidate departure is scored on **its own date's** traffic pattern:
+the weekday/weekend split comes from the departure's calendar date,
+so a Friday 23:00 departure is judged on weekday readings and a
+Saturday 02:00 departure on weekend readings. Scoring either with the
+other day's data would quietly build the wrong day's traffic into the
+answer.
+
+**Worked example (measured).** East Outer Ring, goods ready Friday
+20:00, deliver by Saturday 09:00. The thirteen candidate departures
+(Friday 20:00–23:00 on weekday data, Saturday 00:00–08:00 on weekend
+data) are on time in 100% of historical readings — overnight roads
+are empty — so the planner's answer is the latest of them: **depart
+Saturday 08:00, typical arrival Saturday 08:16, bad-day (P90)
+arrival Saturday 08:18**. No night dispatch is needed at all; the
+planner's value in this case is proving that from the route's own
+data, instead of sending a truck out at 20:00 "just to be safe".

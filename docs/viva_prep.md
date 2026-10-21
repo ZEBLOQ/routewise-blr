@@ -126,3 +126,17 @@ keeps the fleet free for other work. Example: East Outer Ring, goods ready 09:00
 deadline 18:00 — every departure up to 16:00 was on time in 100% of historical readings,
 so the planner says leave at 16:00 (typical arrival 16:36), not 09:00. The 17:00
 departure, at 94.3%, falls below the safety level and is visibly marked as the cliff edge.
+
+**Q: How does overnight / next-day planning work in the Deliver-by Planner?**
+The goods-ready and deliver-by inputs are dates plus hours, not just hours, so a
+window can cross midnight (up to 72 hours). Every candidate departure in the window
+is scored against the deadline using the traffic pattern of *its own* date:
+weekday vs weekend is derived from the departure's calendar date. That rule matters —
+a Friday 23:00 departure faces weekday late-evening traffic, while a Saturday 02:00
+departure faces weekend night traffic, and scoring either with the other's data would
+be quietly wrong. Example: East Outer Ring, goods ready Friday 20:00, deliver by
+Saturday 09:00 — all thirteen candidate departures are on time in 100% of historical
+readings, so the planner recommends the latest, Saturday 08:00 (typical arrival
+08:16, P90 arrival 08:18). The correct operational answer there is "don't dispatch
+at night at all", and the tool proves it from the route's own data instead of
+assuming an evening dispatch is necessary.

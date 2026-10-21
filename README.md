@@ -47,7 +47,9 @@ Six views: (1) **Plan Any Trip** (modelled — see below), (2) Reliability Ranki
 readings on the 13 dataset routes. The Deliver-by Planner works backward from a
 delivery deadline (goods-ready time + deliver-by time → latest safe departure at
 ≥95% on-time, with an honest "not feasible safely" state) and runs in measured
-mode on the 13 routes or in modelled mode on any trip.
+mode on the 13 routes or in modelled mode on any trip. It is date-aware:
+goods ready Friday evening can be planned against a Saturday-morning
+deadline, each departure scored on its own date's traffic pattern.
 
 **Plan Any Trip (MODELLED layer, `src/anytrip.py`):** type any start and
 destination; the app geocodes them (OSM Nominatim), gets the road distance

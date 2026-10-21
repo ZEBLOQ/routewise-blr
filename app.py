@@ -10,6 +10,9 @@ All app code written from scratch for this project.
 """
 import json
 import sys
+from datetime import datetime as dt_datetime
+from datetime import time as dt_time
+from datetime import timedelta as dt_timedelta
 from pathlib import Path
 
 import numpy as np
@@ -20,9 +23,9 @@ sys.path.insert(0, str(Path(__file__).parent / "src"))
 from anytrip import build_model, fetch_route, geocode_place, on_time_prob, predict  # noqa: E402
 from common import OUTPUTS, load_cleaned, load_routes  # noqa: E402
 from deliverby import (  # noqa: E402
-    arrival_table_measured,
-    arrival_table_modelled,
-    fmt_clock,
+    arrival_table_measured_span,
+    arrival_table_modelled_span,
+    fmt_dt,
     latest_safe_departure,
 )
 from planner import hourly_stats, recommend  # noqa: E402
@@ -286,11 +289,14 @@ elif view == "Deliver-by Planner":
         "latest we can safely leave?\"** That is backward scheduling (the same idea "
         "as planning a production job backward from its due date): fix the deadline, "
         "subtract the travel time hour by hour, and find the latest departure whose "
-        "on-time chance still meets the safety level (**≥95%**). "
-        "Times are hourly — the data is hourly, so all times here are whole hours."
+        "on-time chance still meets the safety level (**≥95%**)."
+    )
+    st.caption(
+        "Weekday/weekend traffic is taken from each departure's own date — a "
+        "Friday-night departure uses weekday data, a Saturday-morning one uses "
+        "weekend data. Times are hourly because the readings are hourly."
     )
     mode = st.radio("Trip", ["Measured route", "Any trip (modelled)"], horizontal=True)
-    day_type = st.radio("Day type", ["weekday", "weekend"], horizontal=True, key="db_day_type")
     distance_km = None
     code = None
     scenario = "no_rain"
@@ -335,79 +341,93 @@ elif view == "Deliver-by Planner":
         else:
             st.write("Press **Find route for this trip** to resolve the two places "
                      "before planning.")
+    _today = dt_datetime.now().date()
     c1, c2 = st.columns(2)
-    ready_hour = c1.selectbox("Goods ready (hour)", list(range(0, 24)), index=9)
-    deadline_hour = c2.selectbox("Deliver by (hour)", list(range(1, 24)), index=17)
+    with c1:
+        ready_date = st.date_input("Goods ready (date)", value=_today, key="db_ready_date")
+        ready_hour = st.selectbox("Goods ready (hour)", list(range(0, 24)), index=9,
+                                  key="db_ready_hour")
+    with c2:
+        deadline_date = st.date_input("Deliver by (date)", value=ready_date,
+                                      key="db_deadline_date")
+        deadline_hour = st.selectbox("Deliver by (hour)", list(range(0, 24)), index=18,
+                                     key="db_deadline_hour")
+    ready_dt = dt_datetime.combine(ready_date, dt_time(int(ready_hour)))
+    deadline_dt = dt_datetime.combine(deadline_date, dt_time(int(deadline_hour)))
 
-    if deadline_hour <= ready_hour:
-        st.error("Deliver-by hour must be after the goods-ready hour — a deadline at "
-                 "or before the goods are ready leaves no possible departure.")
+    if deadline_dt <= ready_dt:
+        st.error("Deliver-by must be after goods-ready.")
+    elif deadline_dt - ready_dt > dt_timedelta(hours=72):
+        st.error("That window is longer than 72 hours — please narrow it: pick a "
+                 "goods-ready time and a deadline closer together.")
     else:
         table = None
         if mode == "Measured route":
-            table = arrival_table_measured(df, code, day_type, int(ready_hour),
-                                           int(deadline_hour))
+            table = arrival_table_measured_span(df, code, ready_dt, deadline_dt)
         elif distance_km is not None:
-            table = arrival_table_modelled(get_model(), float(distance_km), day_type,
-                                           scenario, int(ready_hour), int(deadline_hour))
+            table = arrival_table_modelled_span(get_model(), float(distance_km),
+                                                scenario, ready_dt, deadline_dt)
         if table is not None:
             result = latest_safe_departure(table)
             if result["feasible"]:
                 st.success(
-                    f"**Latest safe departure: {result['hour']:02d}:00** — typically "
-                    f"arrives {fmt_clock(result['typical_arrival'])}, bad-day (P90) "
-                    f"arrival {fmt_clock(result['p90_arrival'])}, on-time chance "
-                    f"{result['on_time_prob']*100:.0f}% (safety level ≥95%). "
+                    f"**Latest safe departure: {fmt_dt(result['departure_dt'])}** — "
+                    f"typically arrives {fmt_dt(result['typical_arrival_dt'])}, "
+                    f"bad-day (P90) arrival {fmt_dt(result['p90_arrival_dt'])}, "
+                    f"on-time chance {result['on_time_prob']*100:.0f}% "
+                    "(safety level ≥95%). "
                     "Leaving later than this drops below the safety level; leaving "
                     "earlier wastes vehicle and driver time you could use elsewhere."
                 )
             else:
-                best = result["best_hour"]
-                when = (f"even leaving at {best:02d}:00 (goods-ready time)"
-                        if best == int(ready_hour) else
-                        f"even the best departure in your window, {best:02d}:00,")
+                best_dt = result["best_departure_dt"]
+                when = (f"even leaving at {fmt_dt(best_dt)} (goods-ready time)"
+                        if best_dt == pd.Timestamp(ready_dt) else
+                        f"even the best departure in your window, {fmt_dt(best_dt)},")
                 st.error(
                     f"**Not feasible safely** — {when} gives an on-time chance of only "
                     f"{result['best_prob']*100:.0f}% (typical arrival "
-                    f"{fmt_clock(result['typical_arrival'])}, bad-day (P90) arrival "
-                    f"{fmt_clock(result['p90_arrival'])}). Leaving earlier isn't "
+                    f"{fmt_dt(result['typical_arrival_dt'])}, bad-day (P90) arrival "
+                    f"{fmt_dt(result['p90_arrival_dt'])}). Leaving earlier isn't "
                     "possible if goods aren't ready; the realistic options are "
                     "dispatching the previous day, renegotiating the deadline, or "
                     "accepting this risk knowingly."
                 )
             show = table.copy()
-            if mode == "Any trip (modelled)":
-                show = show.drop(columns=["n", "low_confidence"])
-            show["typical_arrival"] = show["typical_arrival"].map(fmt_clock)
-            show["p90_arrival"] = show["p90_arrival"].map(fmt_clock)
-            show["on_time_prob"] = (show["on_time_prob"] * 100).round(0)
-            renames = {
-                "departure_hour": "Departure hour", "n": "Readings",
-                "travel_median": "Travel median (min)", "travel_p90": "Travel P90 (min)",
-                "typical_arrival": "Typical arrival", "p90_arrival": "P90 arrival",
-                "on_time_prob": "On-time %", "low_confidence": "Low confidence"}
-            show = show.drop(columns=["budget_min"]).rename(columns=renames)
-            show["Travel median (min)"] = show["Travel median (min)"].round(1)
-            show["Travel P90 (min)"] = show["Travel P90 (min)"].round(1)
-            st.dataframe(show, width="stretch")
+            show["Departure"] = show["departure_dt"].map(fmt_dt)
+            show["Day type"] = show["day_type_used"].str.capitalize()
+            show["Typical arrival"] = show["typical_arrival_dt"].map(fmt_dt)
+            show["P90 arrival"] = show["p90_arrival_dt"].map(fmt_dt)
+            show["On-time %"] = (show["on_time_prob"] * 100).round(0)
+            show["Travel median (min)"] = show["travel_median"].round(1)
+            show["Travel P90 (min)"] = show["travel_p90"].round(1)
+            cols = ["Departure", "Day type"]
+            if mode == "Measured route":
+                show = show.rename(columns={"n": "Readings",
+                                            "low_confidence": "Low confidence"})
+                cols += ["Readings"]
+            cols += ["Travel median (min)", "Travel P90 (min)", "Typical arrival",
+                     "P90 arrival", "On-time %"]
+            if mode == "Measured route":
+                cols += ["Low confidence"]
+            st.dataframe(show[cols], width="stretch")
             if mode == "Measured route" and bool(table["low_confidence"].any()):
                 st.caption("Hours flagged low-confidence have fewer than 30 readings "
                            "and are excluded from the latest-safe pick (shown for "
                            "completeness).")
             if HAS_PLOTLY:
-                fig = px.line(table, x="departure_hour",
-                              y=["typical_arrival", "p90_arrival"], markers=True,
-                              labels={"value": "Arrival (minutes since midnight)",
-                                      "departure_hour": "Departure hour", "variable": ""})
-                fig.add_hline(y=int(deadline_hour) * 60, line_dash="dash",
-                              annotation_text=f"Deadline {int(deadline_hour):02d}:00")
-                ticks = list(range(int(ready_hour) * 60, int(deadline_hour) * 60 + 1, 120))
-                fig.update_yaxes(tickvals=ticks, ticktext=[fmt_clock(t) for t in ticks])
+                fig = px.line(table, x="departure_dt",
+                              y=["typical_arrival_dt", "p90_arrival_dt"], markers=True,
+                              labels={"value": "Arrival", "departure_dt": "Departure",
+                                      "variable": ""})
+                fig.add_hline(y=deadline_dt, line_dash="dash",
+                              annotation_text=f"Deadline {fmt_dt(deadline_dt)}")
                 st.plotly_chart(fig, width="stretch")
-            st.caption("Backward scheduling at hourly granularity: budget for an "
-                       "hour = deadline minus departure hour; on-time chance is the "
-                       "share of trips (measured, or modelled for any-trip) that fit "
-                       "that budget.")
+            st.caption("Backward scheduling across the whole window: budget for a "
+                       "departure = deadline minus departure time; on-time chance is "
+                       "the share of trips (measured, or modelled for any-trip) that "
+                       "fit that budget. Each departure is scored on its own date's "
+                       "traffic pattern.")
 
 # ---------------------------------------------------------------- weather
 elif view == "Weather Impact":
