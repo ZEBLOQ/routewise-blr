@@ -41,9 +41,13 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt   # first tim
 .venv/bin/streamlit run app.py
 ```
 
-Five views: (1) **Plan Any Trip** (modelled — see below), (2) Reliability Ranking,
-(3) Route Explorer, (4) Dispatch Planner, (5) Weather Impact. Views 2–5 are
-MEASURED: every number comes from actual readings on the 13 dataset routes.
+Six views: (1) **Plan Any Trip** (modelled — see below), (2) Reliability Ranking,
+(3) Route Explorer, (4) Dispatch Planner, (5) **Deliver-by Planner**,
+(6) Weather Impact. Views 2–4 and 6 are MEASURED: every number comes from actual
+readings on the 13 dataset routes. The Deliver-by Planner works backward from a
+delivery deadline (goods-ready time + deliver-by time → latest safe departure at
+≥95% on-time, with an honest "not feasible safely" state) and runs in measured
+mode on the 13 routes or in modelled mode on any trip.
 
 **Plan Any Trip (MODELLED layer, `src/anytrip.py`):** type any start and
 destination; the app geocodes them (OSM Nominatim), gets the road distance
@@ -69,12 +73,13 @@ python3 validate_anytrip.py  # Any-trip layer: leave-one-route-out validation
 ## Project structure
 
 ```
-app.py                  Streamlit app (5 views; first view is the modelled any-trip layer)
+app.py                  Streamlit app (6 views; first view is the modelled any-trip layer)
 requirements.txt        streamlit, pandas, numpy, plotly, requests
 src/  common.py         shared constants/loaders
       audit_and_clean.py, analysis.py, planner.py, backtest.py, validate.py
       anytrip.py          generalised pattern model + geocode/route lookups
       validate_anytrip.py leave-one-route-out validation of the any-trip model
+      deliverby.py        backward (deliver-by) planner: deadline -> latest safe departure
 data/raw/               frozen source CSVs + SNAPSHOT.md (provenance)
 data/processed/         cleaned.csv — 110,440 hourly observations
 outputs/                data_audit.md, findings.md, reliability_ranking.csv,

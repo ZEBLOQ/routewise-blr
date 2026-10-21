@@ -254,3 +254,49 @@ hour cells). Results, all 13 routes reported in
   is all the sparse weather coverage supports.
 - The on-time probability borrows the *spread* of the measured routes; it is
   a modelled probability, not a frequency counted on the user's own route.
+
+## 11. Deliver-by Planner (added after the any-trip layer)
+
+Sections 1–10 plan **forward**: pick a departure hour, ask how long the trip
+takes. A real dispatcher usually faces the question the other way round —
+the customer's deadline is fixed and the goods become ready at a known
+time. This is **backward scheduling**, the same idea production planning
+uses when it schedules a job backward from its due date: fix the end,
+subtract the process time, and the answer you need is a *start* time.
+
+The Deliver-by Planner (sixth app view, `src/deliverby.py`) takes a trip,
+a goods-ready hour and a deliver-by deadline, and works backward:
+
+- For each departure hour h from goods-ready to just before the deadline,
+  the travel-time budget is (deadline − h). The on-time probability for
+  that hour is the probability that the trip fits that budget — counted
+  from the route's own readings in measured mode, or from the any-trip
+  model (Section 10) in modelled mode, clearly labelled as before.
+- **The recommendation is the LATEST departure hour that still meets the
+  safety level of ≥95% on-time probability** — not the earliest. Leaving
+  hours earlier than necessary is not free: it ties up a vehicle and a
+  driver that could be doing other trips. Latest-safe is the departure
+  that respects the deadline *and* wastes the least capacity.
+- **Infeasible deadlines are reported, not smoothed over.** If no
+  departure hour reaches 95%, the view says "Not feasible safely", names
+  the best available hour and its real probability, and states the
+  realistic options: dispatch the previous day, renegotiate the deadline,
+  or accept the risk knowingly. The goods are not ready earlier, so
+  pretending otherwise would be a false promise built into the tool.
+
+**Worked example (measured, from the route's own readings).** East Outer
+Ring, weekday, goods ready 09:00, deliver by 18:00. Departures 09:00–16:00
+all arrive on time in 100% of historical readings; the 17:00 departure
+drops to 94.3%. The planner's answer is therefore **latest safe departure
+16:00 — typical arrival 16:36, bad-day (P90) arrival 16:51** — a full
+working day later than the goods were ready, at no measured risk.
+Tighten the same deadline to 10:00 and the only possible departure,
+09:00, has an on-time probability of 91.7% (typical arrival 9:48, P90
+arrival 9:59) — below the safety level, so the view reports the delivery
+as not feasible safely instead of dressing 91.7% up as a plan.
+
+Granularity is one hour because the dataset is hourly, and the safety
+level is a stated constant (95%), not a tuned parameter — the full
+per-hour table (travel median, travel P90, typical arrival, P90 arrival,
+on-time %) is shown behind every answer so the dispatcher can see
+exactly how close to the cliff each departure hour is.

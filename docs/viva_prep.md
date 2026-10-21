@@ -106,3 +106,23 @@ OpenStreetMap geocoding and OSRM routing supply only the trip's distance, the pr
 comes from our own validated pattern model, and its error is published. Where Google is
 genuinely better — live conditions on an arbitrary pair — I say so; that is not the claim
 this project makes.
+
+**Q: What is the difference between forward planning and backward planning in your app?**
+The Dispatch Planner plans forward: fix a departure hour, ask whether the trip fits a
+duration target. The Deliver-by Planner plans backward: the delivery deadline is fixed
+and the goods-ready time is known, so it subtracts travel time from the deadline hour by
+hour and finds the latest departure that still arrives on time. It is the same idea as
+backward scheduling in production planning (PPC) — schedule a job backward from its due
+date to get its latest start time — applied to dispatch instead of machines. If no
+departure reaches the safety level (≥95% on-time), the view says "not feasible safely"
+and shows the best real probability, instead of dressing up a gamble as a plan.
+
+**Q: Why recommend the LATEST safe departure instead of the earliest?**
+Because leaving early is not free. A vehicle and driver sent out hours before they need
+to be are a vehicle and driver that cannot do another trip — that is wasted capacity, the
+same reason production doesn't start every job the moment material arrives. The latest
+departure that still meets the ≥95% on-time bar respects the customer's deadline and
+keeps the fleet free for other work. Example: East Outer Ring, goods ready 09:00,
+deadline 18:00 — every departure up to 16:00 was on time in 100% of historical readings,
+so the planner says leave at 16:00 (typical arrival 16:36), not 09:00. The 17:00
+departure, at 94.3%, falls below the safety level and is visibly marked as the cliff edge.

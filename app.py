@@ -19,6 +19,12 @@ import streamlit as st
 sys.path.insert(0, str(Path(__file__).parent / "src"))
 from anytrip import build_model, fetch_route, geocode_place, on_time_prob, predict  # noqa: E402
 from common import OUTPUTS, load_cleaned, load_routes  # noqa: E402
+from deliverby import (  # noqa: E402
+    arrival_table_measured,
+    arrival_table_modelled,
+    fmt_clock,
+    latest_safe_departure,
+)
 from planner import hourly_stats, recommend  # noqa: E402
 
 try:
@@ -55,7 +61,8 @@ st.caption(
 
 view = st.sidebar.radio(
     "View",
-    ["Plan Any Trip", "Reliability Ranking", "Route Explorer", "Dispatch Planner", "Weather Impact"],
+    ["Plan Any Trip", "Reliability Ranking", "Route Explorer", "Dispatch Planner",
+     "Deliver-by Planner", "Weather Impact"],
 )
 
 
@@ -89,8 +96,10 @@ if view == "Plan Any Trip":
         "**MODELLED estimate** — predicted from Bengaluru-wide patterns learned from "
         "13 measured corridors. Not measured on this exact route. "
         f"Validated average error: **{_validated_error_pct()}%** (leave-one-route-out). "
-        "The other four views in this app are MEASURED — every number there comes from "
-        "actual readings on that route. This view trades that certainty for coverage: "
+        "The Reliability Ranking, Route Explorer, Dispatch Planner and Weather Impact "
+        "views are MEASURED — every number there comes from actual readings on that "
+        "route (the Deliver-by Planner is MEASURED too, in its measured mode). "
+        "This view trades that certainty for coverage: "
         "it can say something about any trip, with the error stated up front."
     )
     st.write(
@@ -267,6 +276,138 @@ elif view == "Dispatch Planner":
             fig = px.bar(stats, x="departure_hour", y="on_time_prob",
                          labels={"departure_hour": "Departure hour", "on_time_prob": "On-time probability"})
             st.plotly_chart(fig, width="stretch")
+
+# ---------------------------------------------------------------- deliver-by
+elif view == "Deliver-by Planner":
+    st.header("Deliver-by planner — plan backward from a delivery deadline")
+    st.write(
+        "Companies rarely ask \"how long is the trip?\" — they ask **\"the goods are "
+        "ready at this time, the customer wants delivery by that time: when is the "
+        "latest we can safely leave?\"** That is backward scheduling (the same idea "
+        "as planning a production job backward from its due date): fix the deadline, "
+        "subtract the travel time hour by hour, and find the latest departure whose "
+        "on-time chance still meets the safety level (**≥95%**). "
+        "Times are hourly — the data is hourly, so all times here are whole hours."
+    )
+    mode = st.radio("Trip", ["Measured route", "Any trip (modelled)"], horizontal=True)
+    day_type = st.radio("Day type", ["weekday", "weekend"], horizontal=True, key="db_day_type")
+    distance_km = None
+    code = None
+    scenario = "no_rain"
+    if mode == "Measured route":
+        st.info("MEASURED — every probability below is counted from this route's own "
+                "historical readings.")
+        full_label = st.selectbox("Route", list(label_to_code.keys()), key="db_route")
+        code = label_to_code[full_label]
+    else:
+        st.warning(
+            "**MODELLED estimate** — predicted from Bengaluru-wide patterns learned from "
+            "13 measured corridors. Not measured on this exact route. "
+            f"Validated average error: **{_validated_error_pct()}%** (leave-one-route-out). "
+            "In measured mode this same view counts a route's own readings instead."
+        )
+        oc, dc = st.columns(2)
+        origin_text = oc.text_input("Start (origin)", value="Benniganahalli Metro Station",
+                                    key="db_origin")
+        dest_text = dc.text_input("Destination", value="Embassy TechVillage", key="db_dest")
+        scenario_label = st.radio("Weather scenario", ["No rain", "Rain"],
+                                  horizontal=True, key="db_scenario")
+        scenario = "rain" if scenario_label == "Rain" else "no_rain"
+        if st.button("Find route for this trip"):
+            origin = cached_geocode(origin_text)
+            dest = cached_geocode(dest_text)
+            if not origin.get("ok"):
+                st.error(f"Start place problem — {origin.get('error', 'lookup failed.')}")
+            elif not dest.get("ok"):
+                st.error(f"Destination problem — {dest.get('error', 'lookup failed.')}")
+            else:
+                route = cached_route(origin, dest)
+                if not route.get("ok"):
+                    st.error(route.get("error", "Routing failed. Please try again."))
+                else:
+                    st.session_state["deliverby_route"] = route
+        db_route = st.session_state.get("deliverby_route")
+        if db_route:
+            distance_km = db_route["distance_km"]
+            st.write(f"Route found: **{distance_km:.1f} km** by road "
+                     f"(OSRM free-flow reference {db_route['freeflow_min']:.0f} min — "
+                     "reference only; predictions come from the historical pattern).")
+        else:
+            st.write("Press **Find route for this trip** to resolve the two places "
+                     "before planning.")
+    c1, c2 = st.columns(2)
+    ready_hour = c1.selectbox("Goods ready (hour)", list(range(0, 24)), index=9)
+    deadline_hour = c2.selectbox("Deliver by (hour)", list(range(1, 24)), index=17)
+
+    if deadline_hour <= ready_hour:
+        st.error("Deliver-by hour must be after the goods-ready hour — a deadline at "
+                 "or before the goods are ready leaves no possible departure.")
+    else:
+        table = None
+        if mode == "Measured route":
+            table = arrival_table_measured(df, code, day_type, int(ready_hour),
+                                           int(deadline_hour))
+        elif distance_km is not None:
+            table = arrival_table_modelled(get_model(), float(distance_km), day_type,
+                                           scenario, int(ready_hour), int(deadline_hour))
+        if table is not None:
+            result = latest_safe_departure(table)
+            if result["feasible"]:
+                st.success(
+                    f"**Latest safe departure: {result['hour']:02d}:00** — typically "
+                    f"arrives {fmt_clock(result['typical_arrival'])}, bad-day (P90) "
+                    f"arrival {fmt_clock(result['p90_arrival'])}, on-time chance "
+                    f"{result['on_time_prob']*100:.0f}% (safety level ≥95%). "
+                    "Leaving later than this drops below the safety level; leaving "
+                    "earlier wastes vehicle and driver time you could use elsewhere."
+                )
+            else:
+                best = result["best_hour"]
+                when = (f"even leaving at {best:02d}:00 (goods-ready time)"
+                        if best == int(ready_hour) else
+                        f"even the best departure in your window, {best:02d}:00,")
+                st.error(
+                    f"**Not feasible safely** — {when} gives an on-time chance of only "
+                    f"{result['best_prob']*100:.0f}% (typical arrival "
+                    f"{fmt_clock(result['typical_arrival'])}, bad-day (P90) arrival "
+                    f"{fmt_clock(result['p90_arrival'])}). Leaving earlier isn't "
+                    "possible if goods aren't ready; the realistic options are "
+                    "dispatching the previous day, renegotiating the deadline, or "
+                    "accepting this risk knowingly."
+                )
+            show = table.copy()
+            if mode == "Any trip (modelled)":
+                show = show.drop(columns=["n", "low_confidence"])
+            show["typical_arrival"] = show["typical_arrival"].map(fmt_clock)
+            show["p90_arrival"] = show["p90_arrival"].map(fmt_clock)
+            show["on_time_prob"] = (show["on_time_prob"] * 100).round(0)
+            renames = {
+                "departure_hour": "Departure hour", "n": "Readings",
+                "travel_median": "Travel median (min)", "travel_p90": "Travel P90 (min)",
+                "typical_arrival": "Typical arrival", "p90_arrival": "P90 arrival",
+                "on_time_prob": "On-time %", "low_confidence": "Low confidence"}
+            show = show.drop(columns=["budget_min"]).rename(columns=renames)
+            show["Travel median (min)"] = show["Travel median (min)"].round(1)
+            show["Travel P90 (min)"] = show["Travel P90 (min)"].round(1)
+            st.dataframe(show, width="stretch")
+            if mode == "Measured route" and bool(table["low_confidence"].any()):
+                st.caption("Hours flagged low-confidence have fewer than 30 readings "
+                           "and are excluded from the latest-safe pick (shown for "
+                           "completeness).")
+            if HAS_PLOTLY:
+                fig = px.line(table, x="departure_hour",
+                              y=["typical_arrival", "p90_arrival"], markers=True,
+                              labels={"value": "Arrival (minutes since midnight)",
+                                      "departure_hour": "Departure hour", "variable": ""})
+                fig.add_hline(y=int(deadline_hour) * 60, line_dash="dash",
+                              annotation_text=f"Deadline {int(deadline_hour):02d}:00")
+                ticks = list(range(int(ready_hour) * 60, int(deadline_hour) * 60 + 1, 120))
+                fig.update_yaxes(tickvals=ticks, ticktext=[fmt_clock(t) for t in ticks])
+                st.plotly_chart(fig, width="stretch")
+            st.caption("Backward scheduling at hourly granularity: budget for an "
+                       "hour = deadline minus departure hour; on-time chance is the "
+                       "share of trips (measured, or modelled for any-trip) that fit "
+                       "that budget.")
 
 # ---------------------------------------------------------------- weather
 elif view == "Weather Impact":
