@@ -63,7 +63,20 @@ st.markdown(f"<style>{dashboard_css}</style>", unsafe_allow_html=True)
 
 core_routes = int(df.loc[~df["is_airport"], "route_code"].nunique())
 obs_count = f"{len(df):,}"
-date_max = pd.to_datetime(df["date"]).max().strftime("%b %Y")
+if "date" in df.columns:
+    date_max = pd.to_datetime(df["date"]).max().strftime("%b %Y")
+else:
+    snapshot_path = Path(__file__).parent / "data" / "raw" / "SNAPSHOT.md"
+    snapshot_text = snapshot_path.read_text(encoding="utf-8")
+    coverage_prefix = "- Traffic snapshot coverage at freeze time: "
+    coverage_line = next(
+        (line for line in snapshot_text.splitlines() if line.startswith(coverage_prefix)),
+        None,
+    )
+    if coverage_line is None:
+        raise ValueError("Snapshot metadata is missing the traffic coverage date range.")
+    snapshot_end = coverage_line[len(coverage_prefix):].split(" to ", 1)[-1].rstrip(".")
+    date_max = pd.to_datetime(snapshot_end).strftime("%b %Y")
 st.sidebar.markdown(
     '<div class="rw-brand"><div class="rw-brand-mark">↗</div>'
     '<div><div class="rw-brand-name">ROUTEWISE <span style="color:#79d8c8">BLR</span></div>'
