@@ -36,7 +36,12 @@ try:
 except ImportError:
     HAS_PLOTLY = False
 
-st.set_page_config(page_title="RouteWise BLR", layout="wide")
+st.set_page_config(
+    page_title="RouteWise BLR · Dispatch Intelligence",
+    page_icon="🛣️",
+    layout="wide",
+    initial_sidebar_state="expanded",
+)
 
 
 @st.cache_data
@@ -53,20 +58,71 @@ df = get_data()
 routes = get_routes()
 label_to_code = dict(zip(routes["label_full"], routes["route_code"]))
 
-st.title("RouteWise BLR — Urban Logistics Decision Support System")
-st.caption(
-    "For a logistics/dispatch planner: which departure window is most reliable "
-    "for each Bengaluru route? Data: Traffic Monitor Lizard dataset (CC BY 4.0), "
-    "frozen snapshot 2026-10-21 (2025-09-25 to 2026-10-21). "
-    "Journey-time targets in this app are planning assumptions set by you — "
-    "they are not observed business requirements."
+dashboard_css = (Path(__file__).parent / "assets" / "dashboard.css").read_text(encoding="utf-8")
+st.markdown(f"<style>{dashboard_css}</style>", unsafe_allow_html=True)
+
+core_routes = int(df.loc[~df["is_airport"], "route_code"].nunique())
+obs_count = f"{len(df):,}"
+date_max = pd.to_datetime(df["date"]).max().strftime("%b %Y")
+st.sidebar.markdown(
+    '<div class="rw-brand"><div class="rw-brand-mark">↗</div>'
+    '<div><div class="rw-brand-name">ROUTEWISE <span style="color:#79d8c8">BLR</span></div>'
+    '<div class="rw-brand-sub">Dispatch intelligence</div></div></div>',
+    unsafe_allow_html=True,
 )
+st.sidebar.markdown("#### WORKSPACE")
 
 view = st.sidebar.radio(
-    "View",
+    "Choose a view",
     ["Plan Any Trip", "Reliability Ranking", "Route Explorer", "Dispatch Planner",
      "Deliver-by Planner", "Weather Impact"],
+    format_func=lambda item: {
+        "Plan Any Trip": "⌖   Plan any trip",
+        "Reliability Ranking": "◈   Reliability ranking",
+        "Route Explorer": "⌁   Route explorer",
+        "Dispatch Planner": "⏱   Dispatch planner",
+        "Deliver-by Planner": "↩   Deliver-by planner",
+        "Weather Impact": "☼   Weather impact",
+    }[item],
 )
+st.sidebar.markdown(
+    '<div class="rw-side-note"><strong>DATA SNAPSHOT</strong>'
+    '<p>Traffic Monitor Lizard<br>25 Sep 2025 — 21 Oct 2026<br>'
+    'Historical estimates · not live traffic</p></div>',
+    unsafe_allow_html=True,
+)
+
+st.markdown(
+    f'<section class="rw-hero"><div class="rw-hero-copy">'
+    f'<div class="rw-kicker">BENGALURU · URBAN LOGISTICS</div>'
+    f'<h1>Make every dispatch<br>more reliable.</h1>'
+    f'<p>Explore route risk and plan around travel-time variation using a year of '
+    f'historical journey estimates.</p></div>'
+    f'<div class="rw-hero-stats"><div class="rw-stat"><strong>{core_routes}</strong>'
+    f'<span>Core routes</span></div><div class="rw-stat"><strong>{obs_count}</strong>'
+    f'<span>Hourly records</span></div><div class="rw-stat"><strong>{date_max}</strong>'
+    f'<span>Data through</span></div></div></section>',
+    unsafe_allow_html=True,
+)
+
+
+def show_chart(fig):
+    """Apply RouteWise's shared chart styling."""
+    if not HAS_PLOTLY:
+        return
+    fig.update_layout(
+        template="plotly_white",
+        font={"family": "Inter, ui-sans-serif, system-ui, sans-serif", "color": "#173449", "size": 12},
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor="#ffffff",
+        colorway=["#0c8277", "#f28a65", "#4676a9", "#d5a644", "#7359a6"],
+        margin={"l": 16, "r": 18, "t": 35, "b": 12},
+        hoverlabel={"bgcolor": "#102b3f", "font_color": "#ffffff", "bordercolor": "#102b3f"},
+        legend={"orientation": "h", "yanchor": "bottom", "y": 1.02, "xanchor": "left", "x": 0},
+    )
+    fig.update_xaxes(showgrid=False, zeroline=False, linecolor="#dfe8e6")
+    fig.update_yaxes(showgrid=True, gridcolor="#edf1f0", zeroline=False)
+    st.plotly_chart(fig, width="stretch", config={"displaylogo": False})
 
 
 @st.cache_resource
@@ -189,7 +245,7 @@ if view == "Plan Any Trip":
                                   "variable": ""})
             fig.add_hline(y=result["target"], line_dash="dash",
                           annotation_text="Your target (planning assumption)")
-            st.plotly_chart(fig, width="stretch")
+            show_chart(fig)
         st.caption("Modelled estimates — not measurements. Place lookup: OpenStreetMap "
                    "Nominatim; routing: OSRM (free public servers, demo-grade). "
                    "Traffic pattern: Traffic Monitor Lizard dataset (CC BY 4.0).")
@@ -212,7 +268,7 @@ elif view == "Reliability Ranking":
     if HAS_PLOTLY:
         fig = px.bar(rel.sort_values("buffer_index"), x="buffer_index", y="label_short",
                      orientation="h", labels={"buffer_index": "Buffer index", "label_short": "Route"})
-        st.plotly_chart(fig, width="stretch")
+        show_chart(fig)
     st.info("Headline: the fastest route by median is not the most reliable — "
             "see outputs/findings.md for the concrete route example.")
 
@@ -228,7 +284,7 @@ elif view == "Route Explorer":
     if HAS_PLOTLY:
         fig = px.line(by_hour, x="hour", y=["median", "p90"], markers=True,
                       labels={"value": "Minutes", "hour": "Departure hour", "variable": ""})
-        st.plotly_chart(fig, width="stretch")
+        show_chart(fig)
     else:
         st.line_chart(by_hour.set_index("hour")[["median", "p90"]])
     st.dataframe(by_hour, width="stretch")
@@ -278,7 +334,7 @@ elif view == "Dispatch Planner":
         if HAS_PLOTLY:
             fig = px.bar(stats, x="departure_hour", y="on_time_prob",
                          labels={"departure_hour": "Departure hour", "on_time_prob": "On-time probability"})
-            st.plotly_chart(fig, width="stretch")
+            show_chart(fig)
 
 # ---------------------------------------------------------------- deliver-by
 elif view == "Deliver-by Planner":
@@ -422,7 +478,7 @@ elif view == "Deliver-by Planner":
                                       "variable": ""})
                 fig.add_hline(y=deadline_dt, line_dash="dash",
                               annotation_text=f"Deadline {fmt_dt(deadline_dt)}")
-                st.plotly_chart(fig, width="stretch")
+                show_chart(fig)
             st.caption("Backward scheduling across the whole window: budget for a "
                        "departure = deadline minus departure time; on-time chance is "
                        "the share of trips (measured, or modelled for any-trip) that "
@@ -446,7 +502,7 @@ elif view == "Weather Impact":
     if HAS_PLOTLY:
         fig = px.bar(overall, x="condition", y=["median", "p90"], barmode="group",
                      labels={"value": "Minutes", "condition": "", "variable": ""})
-        st.plotly_chart(fig, width="stretch")
+        show_chart(fig)
     summ = pd.read_csv(OUTPUTS / "weather_summary.csv")
     summ["condition"] = np.where(summ["is_rain"], "Rain", "No rain")
     st.subheader("Peak vs off-peak")

@@ -51,6 +51,13 @@ mode on the 13 routes or in modelled mode on any trip. It is date-aware:
 goods ready Friday evening can be planned against a Saturday-morning
 deadline, each departure scored on its own date's traffic pattern.
 
+### Try the dispatch inputs without starting Streamlit
+
+After installing the requirements, run `python make_preview.py` and open
+`preview.html`. This offline preview includes route, day type, target-time and
+departure-window inputs; its recommendation, confidence table and chart update
+from the cleaned historical observations.
+
 **Plan Any Trip (MODELLED layer, `src/anytrip.py`):** type any start and
 destination; the app geocodes them (OSM Nominatim), gets the road distance
 (OSRM), and predicts per-hour median/P90 and on-time probability from a
@@ -88,7 +95,8 @@ outputs/                data_audit.md, findings.md, reliability_ranking.csv,
                         backtest.md/.csv, weather_analysis.md, validation.md,
                         anytrip_model.md, anytrip_examples.md,
                         anytrip_validation.md/.csv, anytrip_facts.json, ...
-docs/                   data_dictionary.md, viva_prep.md
+docs/                   data_dictionary.md, viva_prep.md,
+                        internal_test_playbook.md
 report.md               full project report
 ```
 

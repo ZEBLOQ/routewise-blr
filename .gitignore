@@ -1,4 +1,6 @@
 .venv/
+.deps/
+.pip-temp/
 __pycache__/
 *.pyc
 .streamlit/
